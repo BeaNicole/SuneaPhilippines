@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --font-sans: var(--app-font-sans);
+  --font-serif: var(--app-font-serif);
+  --font-mono: var(--app-font-mono);
+  --radius-lg: var(--radius);
+}
+
+:root {
+  --background: 42 40% 96%;
+  --foreground: 27 15% 14%;
+  --card: 42 40% 96%;
+  --card-foreground: 27 15% 14%;
+  --popover: 42 40% 96%;
+  --popover-foreground: 27 15% 14%;
+  --primary: 23 89% 51%;
+  --primary-foreground: 42 40% 96%;
+  --secondary: 44 94% 57%;
+  --secondary-foreground: 27 15% 14%;
+  --muted: 38 19% 90%;
+  --muted-foreground: 27 9% 43%;
+  --accent: 44 94% 57%;
+  --accent-foreground: 27 15% 14%;
+  --destructive: 0 70% 50%;
+  --destructive-foreground: 42 40% 96%;
+  --border: 36 18% 82%;
+  --input: 36 18% 82%;
+  --ring: 23 89% 51%;
+  --radius: 0.75rem;
+  --app-font-sans: 'DM Sans', sans-serif;
+  --app-font-serif: 'Space Grotesk', sans-serif;
+  --app-font-mono: 'DM Mono', monospace;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+body {
+  margin: 0;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--app-font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: #f3a629; color: #29251f; }
+a { color: inherit; text-decoration: none; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.display { font-family: var(--app-font-serif); letter-spacing: -0.065em; }
+.mono { font-family: var(--app-font-mono); }
+.page-grain::after {
+  content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 50; opacity: .035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+}
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1); }
+.reveal.in-view { opacity: 1; transform: translateY(0); }
+.delay-1 { transition-delay: .12s; } .delay-2 { transition-delay: .22s; } .delay-3 { transition-delay: .32s; }
+.project-image { transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+.project-card:hover .project-image { transform: scale(1.045); }
+.landscape-one .project-image { object-position: 52% 60%; filter: saturate(.82) contrast(1.02); }
+.landscape-two .project-image { object-position: 70% 72%; filter: saturate(.66) hue-rotate(-9deg) brightness(1.08); }
+.landscape-three .project-image { object-position: 24% 42%; filter: saturate(.8) sepia(.12) brightness(.91); }
+.nav-link { position: relative; }
+.nav-link::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 100%; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform .3s ease; }
+.nav-link:hover::after { transform: scaleX(1); transform-origin: left; }
+.sun-orbit { animation: orbit 38s linear infinite; transform-origin: center; }
+@keyframes orbit { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}
