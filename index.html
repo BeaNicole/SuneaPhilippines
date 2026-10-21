@@ -108,6 +108,20 @@
   #approach .about-photo{aspect-ratio:4/3;max-height:400px;margin-top:26px}
   #approach .company-details{grid-template-columns:minmax(0,1fr);gap:26px;margin-top:40px;padding-top:24px}
 }
+
+/* Project showcase: one horizontal row with a seamless swipe loop. */
+#work .project-scroll-hint{display:flex;justify-content:flex-end;align-items:center;gap:8px;color:#aaa397;font-size:9px;margin:-12px 0 14px}
+#work .project-scroll-hint span{font-size:15px;color:var(--yellow)}
+#work .project-carousel{position:relative;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-ms-overflow-style:none;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-behavior:auto;touch-action:pan-x;cursor:grab;outline:none;-webkit-overflow-scrolling:touch}
+#work .project-carousel::-webkit-scrollbar{display:none}
+#work .project-carousel:focus-visible{outline:2px solid var(--yellow);outline-offset:5px}
+#work .project-carousel.is-dragging{cursor:grabbing;user-select:none}
+#work .project-grid{position:relative;display:flex;flex-wrap:nowrap;align-items:stretch;gap:18px;width:max-content;min-width:100%}
+#work .project-card{flex:0 0 clamp(280px,32vw,390px);min-width:0;scroll-snap-align:start;scroll-snap-stop:always}
+#work .project-card[hidden]{display:none}
+@media(max-width:850px){#work .project-card{flex-basis:clamp(280px,70vw,360px)}}
+@media(max-width:560px){#work .project-card{flex-basis:82vw}}
+@media(prefers-reduced-motion:reduce){#work .project-carousel{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -237,8 +251,11 @@
 
      
 
-    <!-- Project Grid -->
-    <div class="project-grid">
+    <!-- Project Grid: single-row swipe carousel -->
+    </div>
+    <p class="project-scroll-hint mono">Swipe to explore <span aria-hidden="true">↔</span></p>
+    <div class="project-carousel" role="region" aria-label="Project showcase. Swipe horizontally to explore." tabindex="0">
+      <div class="project-grid">
 
       <!-- Project 01: Ground Mount -->
       <article
@@ -400,6 +417,7 @@
         </div>
       </article>
 
+      </div>
     </div>
 
     <!-- Illustrative Projects Disclaimer     <p class="sample-note mono">
@@ -419,12 +437,94 @@
 <footer id="contact" class="footer"><div class="wrap"><div class="footer-main"><a href="#top" class="brand footer-brand" aria-label="Sunea Solar &amp; Lighting Retail OPC, back to top"><span class="brand-lockup" aria-hidden="true"><img src="logo.png" alt="" /></span></a><div class="footer-contact"><section aria-labelledby="head-office-heading"><h2 id="head-office-heading" class="contact-label office-heading">Head office</h2><p class="office-company">Sunea Solar &amp; Lighting Retail OPC</p><div class="contact-item"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a class="contact-value" href="mailto:suneasalesph@gmail.com">suneasalesph@gmail.com</a></div><div class="contact-item"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><address class="contact-value">2nd Floor Ysabelle Building, Belfast Avenue,<br>Quezon City, Philippines 1118</address></div></section><section aria-labelledby="branch-heading"><h2 id="branch-heading" class="contact-label office-heading">Branch</h2><div class="contact-item"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><address class="contact-value">B6 L1-B Mc-Arthur Highway, Juliana City,<br>San Fernando, Pampanga 2000, Philippines</address></div><div class="contact-item"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.2 18.8a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.09 4.2 2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72l.45 2.75a2 2 0 0 1-.57 1.68L7.7 9.4a16 16 0 0 0 6 6l1.25-1.25a2 2 0 0 1 1.68-.57l2.75.45a2 2 0 0 1 1.72 1.89Z"/></svg><a class="contact-value" href="tel:0301952813">030 195 2813</a></div><div class="contact-item"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.2 18.8a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.09 4.2 2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72l.45 2.75a2 2 0 0 1-.57 1.68L7.7 9.4a16 16 0 0 0 6 6l1.25-1.25a2 2 0 0 1 1.68-.57l2.75.45a2 2 0 0 1 1.72 1.89Z"/></svg><a class="contact-value" href="tel:0458600901">0458600901</a></div></section></div></div><div class="footer-bottom"><span>Project names, system sizes, and performance figures are illustrative samples</span><a href="#top">Return to beginning ↗</a></div></div></footer>
 <script>
 const filterButtons = document.querySelectorAll(".filter-btn");
-const projectCards = document.querySelectorAll(".project-card");
+const carousel = document.querySelector(".project-carousel");
+const track = document.querySelector("#work .project-grid");
+const projectCards = Array.from(track.querySelectorAll(":scope > .project-card"));
+let activeFilter = "all";
+let centeredStart = 0;
+let loopWidth = 0;
+let loopFrame = 0;
+let carouselBuild = 0;
+
+function rebuildCarousel(selected = activeFilter) {
+  activeFilter = selected;
+  const build = ++carouselBuild;
+  const visibleCards = projectCards.filter((card) => selected === "all" || card.dataset.type === selected);
+  track.replaceChildren(...visibleCards);
+  if (!visibleCards.length) return;
+
+  const cardWidth = visibleCards[0].getBoundingClientRect().width || 320;
+  const gap = parseFloat(getComputedStyle(track).columnGap) || 18;
+  const groupWidth = visibleCards.length * (cardWidth + gap);
+  const copySets = Math.max(2, Math.ceil((carousel.clientWidth + cardWidth * 2) / groupWidth) + 1);
+  const makeClone = (card) => {
+    const clone = card.cloneNode(true);
+    clone.classList.add("carousel-clone");
+    clone.setAttribute("aria-hidden", "true");
+    clone.setAttribute("inert", "");
+    return clone;
+  };
+  const before = [];
+  const after = [];
+  for (let set = 0; set < copySets; set += 1) {
+    visibleCards.forEach((card) => before.push(makeClone(card)));
+    visibleCards.forEach((card) => after.push(makeClone(card)));
+  }
+  track.prepend(...before);
+  track.append(...after);
+
+  requestAnimationFrame(() => {
+    if (build !== carouselBuild) return;
+    centeredStart = visibleCards[0].offsetLeft;
+    const last = visibleCards[visibleCards.length - 1];
+    loopWidth = last.offsetLeft + last.offsetWidth - centeredStart + gap;
+    carousel.scrollLeft = centeredStart;
+  });
+}
+
 filterButtons.forEach((button) => button.addEventListener("click", () => {
   const selected = button.dataset.filter;
   filterButtons.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
-  projectCards.forEach((card) => { card.hidden = selected !== "all" && card.dataset.type !== selected; });
+  rebuildCarousel(selected);
 }));
+
+carousel.addEventListener("scroll", () => {
+  if (loopFrame) return;
+  loopFrame = requestAnimationFrame(() => {
+    loopFrame = 0;
+    if (!loopWidth) return;
+    const lowerLoopEdge = centeredStart - loopWidth * 0.7;
+    const upperLoopEdge = centeredStart + loopWidth * 0.7;
+    if (carousel.scrollLeft < lowerLoopEdge) carousel.scrollLeft += loopWidth;
+    else if (carousel.scrollLeft > upperLoopEdge) carousel.scrollLeft -= loopWidth;
+  });
+}, { passive: true });
+
+let mouseDrag = null;
+carousel.addEventListener("pointerdown", (event) => {
+  if (event.pointerType !== "mouse" || event.button !== 0) return;
+  mouseDrag = { id: event.pointerId, x: event.clientX, scroll: carousel.scrollLeft };
+  carousel.classList.add("is-dragging");
+  carousel.setPointerCapture(event.pointerId);
+});
+carousel.addEventListener("pointermove", (event) => {
+  if (!mouseDrag || event.pointerId !== mouseDrag.id) return;
+  carousel.scrollLeft = mouseDrag.scroll - (event.clientX - mouseDrag.x);
+});
+const endMouseDrag = (event) => {
+  if (!mouseDrag || event.pointerId !== mouseDrag.id) return;
+  mouseDrag = null;
+  carousel.classList.remove("is-dragging");
+};
+carousel.addEventListener("pointerup", endMouseDrag);
+carousel.addEventListener("pointercancel", endMouseDrag);
+
+let resizeTimer;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => rebuildCarousel(activeFilter), 150);
+});
+rebuildCarousel();
 const menuButton = document.querySelector(".menu-toggle");
 const mobileNav = document.querySelector(".mobile-nav");
 menuButton.addEventListener("click", () => {
