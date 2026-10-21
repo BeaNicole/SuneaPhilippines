@@ -459,6 +459,7 @@ function rebuildCarousel(selected = activeFilter) {
   const copySets = Math.max(2, Math.ceil((carousel.clientWidth + cardWidth * 2) / groupWidth) + 1);
   const makeClone = (card) => {
     const clone = card.cloneNode(true);
+    clone.classList.remove("reveal", "in-view");
     clone.classList.add("carousel-clone");
     clone.setAttribute("aria-hidden", "true");
     clone.setAttribute("inert", "");
@@ -538,7 +539,7 @@ mobileNav.querySelectorAll("a").forEach((link) => link.addEventListener("click",
   menuButton.setAttribute("aria-label", "Open navigation");
   mobileNav.classList.remove("open");
 }));
-document.querySelectorAll(".hero-content > *, .about-layout > *, .section-head > *, .project-card, .sun-copy > *, .step, .impact-head > *, .metric, .cta-inner > *, .footer-brand, .footer-contact > section, .footer-bottom > *").forEach((node) => node.classList.add("reveal"));
+document.querySelectorAll(".hero-content > *, .about-layout > *, .section-head > *, .sun-copy > *, .step, .impact-head > *, .metric, .cta-inner > *, .footer-brand, .footer-contact > section, .footer-bottom > *").forEach((node) => node.classList.add("reveal"));
 if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
     if (entry.isIntersecting) { entry.target.classList.add("in-view"); observer.unobserve(entry.target); }
