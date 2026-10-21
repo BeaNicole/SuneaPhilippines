@@ -30,8 +30,8 @@
 /* Main About Heading */
 #approach > .wrap > div:last-child > h2.display{font-size:clamp(48px,6vw,88px);line-height:.98;letter-spacing:-.055em;margin-bottom:32px}
 
-/* Justified Text */
-#approach .about-intro p,#approach .company-details article p,#approach .photo-note{text-align:justify!important;text-justify:inter-word}
+/* Readable About copy */
+#approach .about-intro p,#approach .company-details article p,#approach .photo-note{text-align:left!important;text-justify:auto}
 
 /* Italic Emphasis */
 #approach em{font-style:italic}
@@ -74,6 +74,40 @@
 .project-card{transition:transform .35s ease,border-color .35s ease}.project-card:hover{transform:translateY(-5px);border-color:rgba(239,185,54,.65)}
 .sun-section:after{animation:solar-breathe 7s ease-in-out infinite alternate}@keyframes solar-breathe{from{transform:scale(1);opacity:.7}to{transform:scale(1.04);opacity:1}}
 @media(prefers-reduced-motion:reduce){.project-card:hover,.about-photo:hover img{transform:none}}
+
+/* About section: open editorial layout with clear content groups. */
+#approach .about-layout{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);grid-template-areas:"heading intro" "photo photo" "note note" "details details";column-gap:clamp(44px,8vw,112px);row-gap:0;align-items:start}
+#approach .about-heading{grid-area:heading;align-self:center;min-width:0}
+#approach .section-marker{margin:0 0 22px;padding-top:0}
+#approach .about-heading h2{font-size:clamp(50px,5.6vw,76px);line-height:.98;letter-spacing:-.055em;margin:0;max-width:11ch}
+#approach .about-heading h2 em{color:var(--orange)}
+#approach .about-intro{grid-area:intro;max-width:64ch;margin:0;color:#625d53;font-size:14px;line-height:1.9}
+#approach .about-intro p{margin:0 0 18px}
+#approach .about-intro p:last-child{margin-bottom:0}
+#approach .about-photo{grid-area:photo;position:relative;width:100%;aspect-ratio:2/1;max-height:560px;overflow:hidden;background:#d8d0bf;margin:clamp(44px,6vw,76px) 0 0}
+#approach .about-photo img{display:block;width:100%;height:100%;object-fit:cover}
+#approach .about-photo:after{display:none}
+#approach .photo-note{grid-area:note;margin:12px 0 0;max-width:none;text-align:left!important}
+#approach .company-details{grid-area:details;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(26px,4vw,58px);align-items:start;border-top:1px solid #c9c2b3;padding-top:28px;margin-top:clamp(46px,6vw,76px)}
+#approach .company-details article{min-width:0;margin:0}
+#approach .company-details article:first-child{grid-column:auto}
+#approach .company-details h3{line-height:1.5;margin:0}
+#approach .company-details p{font-size:13px;line-height:1.8;color:#625d53;margin:14px 0 0;text-align:left!important}
+#approach .about-intro p,#approach .company-details article p{ text-align:left!important;text-justify:auto }
+@media(max-width:800px){
+  #approach .about-layout{display:block}
+  #approach .about-heading{margin-bottom:24px}
+  #approach .about-heading h2{font-size:clamp(48px,8vw,68px);max-width:12ch}
+  #approach .about-photo{aspect-ratio:16/10;max-height:480px;margin-top:30px}
+  #approach .company-details{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 36px;margin-top:46px}
+}
+@media(max-width:640px){
+  #approach .about-layout{width:calc(100% - 36px)}
+  #approach .about-heading h2{font-size:clamp(42px,12vw,58px)}
+  #approach .about-intro{font-size:14px;line-height:1.85}
+  #approach .about-photo{aspect-ratio:4/3;max-height:400px;margin-top:26px}
+  #approach .company-details{grid-template-columns:minmax(0,1fr);gap:26px;margin-top:40px;padding-top:24px}
+}
 </style>
 </head>
 <body>
@@ -84,94 +118,71 @@
   
 <section id="approach" class="section">
   <div class="wrap about-layout">
-
-    <div>
+    <div class="about-heading">
       <p class="section-marker mono">01 / About Sunea</p>
+      <h2 class="display">Good Energy<br>Belongs <em>Somewhere.</em></h2>
+    </div>
 
-      <figure class="about-photo">
-        <img
-          src="banner.png"
-          alt="Solar energy and lighting solutions representing Sunea"
-        >
-        <figcaption class="display">
-          Good energy belongs <em>somewhere.</em>
-        </figcaption>
-      </figure>
-
-      <p class="photo-note">
-        Powering brighter spaces, stronger businesses, and better tomorrows.
+    <div class="about-intro">
+      <p>
+        Somewhere, a home finds comfort in the warmth of light.
+        Somewhere, a business finds the power to keep moving forward.
+        And somewhere, a community takes a step toward a
+        <em>brighter future.</em>
+      </p>
+      <p>
+        At <strong>SUNEA SOLAR &amp; LIGHTING RETAIL OPC</strong>,
+        we believe good energy belongs wherever life happens.
+        It belongs in the spaces we call home, the work we pour
+        our hearts into, and the places where
+        <em>new possibilities take shape.</em>
+      </p>
+      <p>
+        Rooted in Pampanga, we bring this belief to life through
+        quality lighting and solar energy solutions for homes,
+        businesses, and industries. As we grow, our purpose
+        remains the same: to make reliable energy more accessible
+        through trusted products, thoughtful service, and
+        <em>genuine care.</em>
       </p>
     </div>
 
-    <div>
-      <h2 class="display">
-        Good Energy<br>
-        Belongs <em>Somewhere.</em>
-      </h2>
+    <figure class="about-photo">
+      <img src="banner.png" alt="Solar energy and lighting solutions representing Sunea">
+    </figure>
+    <p class="photo-note">Powering brighter spaces, stronger businesses, and better tomorrows.</p>
 
-      <div class="about-intro">
+    <div class="company-details">
+      <article>
+        <h3>Your Partner for a Brighter Tomorrow</h3>
         <p>
-          Somewhere, a home finds comfort in the warmth of light.
-          Somewhere, a business finds the power to keep moving forward.
-          And somewhere, a community takes a step toward a
-          <em>brighter future.</em>
+          We bring solar energy solutions closer to homes and
+          businesses, helping customers explore more efficient
+          ways to meet their energy needs. Alongside our lighting
+          expertise, we remain committed to delivering quality
+          products, practical options, and reliable service that
+          customers can count on.
         </p>
-
+      </article>
+      <article>
+        <h3>Our Vision</h3>
         <p>
-          At <strong>SUNEA SOLAR &amp; LIGHTING RETAIL OPC</strong>,
-          we believe good energy belongs wherever life happens.
-          It belongs in the spaces we call home, the work we pour
-          our hearts into, and the places where
-          <em>new possibilities take shape.</em>
+          To become a <em>trusted provider of solar and lighting
+          solutions across the Philippines</em>, recognized for
+          quality, reliability, and customer service.
         </p>
-
+      </article>
+      <article>
+        <h3>Our Mission</h3>
         <p>
-          Rooted in Pampanga, we bring this belief to life through
-          quality lighting and solar energy solutions for homes,
-          businesses, and industries. As we grow, our purpose
-          remains the same: to make reliable energy more accessible
-          through trusted products, thoughtful service, and
-          <em>genuine care.</em>
+          To deliver quality solar and lighting solutions that
+          meet customer needs through dependable products,
+          practical energy options, and responsive service,
+          while building <em>lasting relationships</em> with
+          homes, businesses, and industries nationwide.
         </p>
-      </div>
-
-      <div class="company-details">
-
-        <article>
-          <h3>Your Partner for a Brighter Tomorrow</h3>
-          <p>
-            We bring solar energy solutions closer to homes and
-            businesses, helping customers explore more efficient
-            ways to meet their energy needs. Alongside our lighting
-            expertise, we remain committed to delivering quality
-            products, practical options, and reliable service that
-            customers can count on.
-          </p>
-        </article>
-
-        <article>
-          <h3>Our Vision</h3>
-          <p>
-            To become a <em>trusted provider of solar and lighting
-            solutions across the Philippines</em>, recognized for
-            quality, reliability, and customer service.
-          </p>
-        </article>
-
-        <article>
-          <h3>Our Mission</h3>
-          <p>
-            To deliver quality solar and lighting solutions that
-            meet customer needs through dependable products,
-            practical energy options, and responsive service,
-            while building <em>lasting relationships</em> with
-            homes, businesses, and industries nationwide.
-          </p>
-        </article>
-
-      </div>
+      </article>
     </div>
-
   </div>
 </section>
 
@@ -204,7 +215,7 @@ mobileNav.querySelectorAll("a").forEach((link) => link.addEventListener("click",
   menuButton.setAttribute("aria-label", "Open navigation");
   mobileNav.classList.remove("open");
 }));
-document.querySelectorAll(".hero-content > *, .about-layout > div, .section-head > *, .project-card, .sun-copy > *, .step, .impact-head > *, .metric, .cta-inner > *, .footer-brand, .footer-contact > section, .footer-bottom > *").forEach((node) => node.classList.add("reveal"));
+document.querySelectorAll(".hero-content > *, .about-layout > *, .section-head > *, .project-card, .sun-copy > *, .step, .impact-head > *, .metric, .cta-inner > *, .footer-brand, .footer-contact > section, .footer-bottom > *").forEach((node) => node.classList.add("reveal"));
 if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
     if (entry.isIntersecting) { entry.target.classList.add("in-view"); observer.unobserve(entry.target); }
