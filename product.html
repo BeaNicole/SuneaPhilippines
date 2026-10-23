@@ -509,13 +509,186 @@ html body #approach .photo-note{text-align:justify!important}
  .calculator-section .calculator-intro .section-title { font-size: 39px; }
 }
 
+
+/* Final calculator layout: match the site's section rhythm and keep the quote CTA independent. */
+.calculator-section { background: var(--yellow) !important; color: var(--ink); padding: clamp(72px, 8vw, 112px) 0; overflow: visible; }
+.calculator-section .wrap.calculator-layout { width: min(1260px, calc(100% - 48px)); margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 42px; align-items: start; }
+.calculator-section .calculator-intro { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(260px, .65fr); gap: clamp(32px, 8vw, 110px); align-items: end; width: 100%; min-width: 0; }
+.calculator-section .calculator-intro > div { min-width: 0; }
+.calculator-section .calculator-intro .section-marker { margin: 0 0 24px; padding: 0; font-size: 10px; letter-spacing: .14em; line-height: 1.5; color: var(--ink); }
+.calculator-section .calculator-intro .section-title { margin: 0; max-width: 820px; font-size: clamp(48px, 7vw, 94px); line-height: .9; letter-spacing: -.065em; }
+.calculator-section .calculator-intro .section-title em { color: var(--orange); font-style: normal; }
+.calculator-section .calculator-intro .section-intro { margin: 0 0 4px; max-width: 420px; color: #51442a; font-size: 14px; line-height: 1.8; }
+.calculator-section .calculator-panel { width: min(100%, 900px); min-width: 0; margin: 0; padding: clamp(22px, 3vw, 38px); border: 1px solid rgba(41,39,34,.16); border-radius: 12px; background: var(--paper); box-shadow: 0 12px 28px rgba(41,39,34,.08); }
+.calculator-section .calculator-entry { display: grid; grid-template-columns: minmax(0, 1fr) minmax(210px, .42fr); gap: 22px; align-items: end; padding-bottom: 26px; border-bottom: 1px solid #d5cdbd; }
+.calculator-section .calculator-panel label { display: block; margin: 0 0 9px; color: var(--ink); font-size: 13px; line-height: 1.45; font-weight: 700; }
+.calculator-section .bill-row { display: flex; width: 100%; margin: 0; }
+.calculator-section .bill-prefix { flex: 0 0 50px; min-height: 50px; display: grid; place-items: center; border: 1px solid #c9c2b3; border-right: 0; border-radius: 6px 0 0 6px; background: #fff; color: var(--orange); font-weight: 700; }
+.calculator-section .bill-input { min-height: 50px; min-width: 0; width: 100%; border: 1px solid #c9c2b3; border-radius: 0 6px 6px 0; padding: 12px 14px; background: #fff; color: var(--ink); font-size: 16px; }
+.calculator-section .calculate-button { min-height: 50px; width: 100%; border: 0; border-radius: 6px; padding: 13px 18px; background: var(--orange); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+.calculator-section .calculate-button:hover { background: var(--orange); filter: brightness(.96); transform: none; }
+.calculator-section .calculator-results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; padding-top: 26px; }
+.calculator-section .calculator-results > div { min-width: 0; padding: clamp(16px, 2vw, 24px); border: 1px solid #e0d9cd; border-top: 4px solid var(--orange); border-radius: 8px; background: #fff; }
+.calculator-section .calculator-results > div:last-child { border-top-color: var(--yellow); }
+.calculator-section .calculator-results h3 { margin: 0 0 20px; padding: 0 0 14px; border-bottom: 1px solid #e5dfd3; color: var(--ink); font-size: clamp(23px, 2.5vw, 30px); line-height: 1.1; letter-spacing: -.035em; }
+.calculator-section .result-field { min-width: 0; margin-bottom: 16px; }
+.calculator-section .result-field:last-child { margin-bottom: 0; }
+.calculator-section .calc-output { display: block; width: 100%; min-width: 0; min-height: 46px; border: 1px solid #e0d9cd; border-radius: 5px; padding: 12px; background: var(--paper); color: var(--ink); font-size: 14px; font-weight: 700; }
+.calculator-section .calc-help, .calculator-section .calc-tip, .calculator-section .calc-disclaimer { color: #514b40; font-size: 12px; line-height: 1.7; overflow-wrap: anywhere; }
+.calculator-section .calc-help { margin: 7px 0 0; font-size: 11px; }
+.calculator-section .calc-tip { margin: 20px 0 0; }
+.calculator-section .calc-disclaimer { margin: 18px 0 0; padding-top: 16px; border-top: 1px solid #ded7cb; font-size: 11px; }
+.calculator-quote-cta { background: var(--orange) !important; color: #fff5e4; padding: 110px 0; }
+.calculator-quote-cta:after { content: none; }
+.calculator-quote-cta .cta-inner { display: grid; grid-template-columns: 1.6fr .65fr; gap: 8%; align-items: end; }
+.calculator-quote-cta .section-kicker { color: #ffdc8e; margin: 0 0 18px; }
+.calculator-quote-cta h2 { margin: 22px 0 0; font-size: clamp(60px, 8vw, 112px); line-height: .84; letter-spacing: -.065em; }
+.calculator-quote-cta h2 em { color: var(--yellow); font-style: normal; }
+.calculator-quote-cta p { color: #ffead3; font-size: 13px; line-height: 1.8; margin: 0 0 23px; }
+.calculator-quote-cta .cta-button { display: inline-flex; align-items: center; gap: 12px; border-radius: 30px; background: var(--yellow); padding: 15px 20px; color: var(--ink); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; white-space: normal; }
+.calculator-quote-cta .cta-button:hover { background: var(--yellow); filter: brightness(1.04); }
+@media (max-width: 760px) {
+ .calculator-section { padding: 64px 0; }
+ .calculator-section .wrap.calculator-layout { width: min(100% - 32px, 640px); gap: 28px; }
+ .calculator-section .calculator-intro { grid-template-columns: minmax(0,1fr); gap: 18px; }
+ .calculator-section .calculator-intro .section-title { font-size: clamp(42px, 10vw, 68px); }
+ .calculator-section .calculator-intro .section-intro { max-width: 560px; }
+ .calculator-section .calculator-panel { width: 100%; padding: 20px; }
+ .calculator-section .calculator-entry { grid-template-columns: minmax(0,1fr); gap: 16px; }
+ .calculator-section .calculator-results { grid-template-columns: minmax(0,1fr); gap: 14px; }
+ .calculator-quote-cta { padding: 76px 0; }
+ .calculator-quote-cta .cta-inner { grid-template-columns: minmax(0,1fr); gap: 28px; }
+ .calculator-quote-cta h2 { font-size: clamp(48px, 11vw, 72px); }
+}
+@media (max-width: 420px) {
+ .calculator-section .wrap.calculator-layout { width: calc(100% - 28px); }
+ .calculator-section .calculator-panel { padding: 16px; }
+ .calculator-section .calculator-results > div { padding: 15px; }
+}
+
+
+
+/* Solar calculator desktop composition — aligned with SUNEA's index.html spacing */
+.calculator-section {
+  background: var(--yellow) !important;
+  color: var(--ink);
+  padding: clamp(48px, 6vw, 76px) 0 !important;
+}
+.calculator-section .calculator-layout {
+  display: grid !important;
+  grid-template-columns: minmax(0, .72fr) minmax(0, 1fr) !important;
+  gap: clamp(28px, 4vw, 52px) !important;
+  align-items: start !important;
+}
+.calculator-section .calculator-intro {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: clamp(24px, 4vw, 42px) !important;
+  min-width: 0;
+  padding-top: 4px;
+}
+.calculator-section .section-marker {
+  margin: 0 0 22px !important;
+  font-size: 10px !important;
+  line-height: 1.5 !important;
+  letter-spacing: .14em !important;
+  text-transform: uppercase;
+}
+.calculator-section .section-title {
+  max-width: 100% !important;
+  margin: 0 !important;
+  font-size: clamp(42px, 5.2vw, 70px) !important;
+  line-height: .98 !important;
+  letter-spacing: -.065em !important;
+  overflow-wrap: normal;
+}
+.calculator-section .section-title em { color: var(--orange) !important; }
+.calculator-section .section-intro {
+  max-width: 390px !important;
+  margin: 0 !important;
+  font-size: 13px !important;
+  line-height: 1.85 !important;
+  color: #51442a !important;
+}
+.calculator-section .calculator-panel {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: clamp(20px, 2.5vw, 30px) !important;
+  border-radius: 8px !important;
+  background: var(--paper) !important;
+  box-shadow: 0 8px 22px rgba(41,39,34,.08) !important;
+}
+.calculator-section .calculator-entry {
+  grid-template-columns: minmax(0, 1fr) minmax(145px, .48fr) !important;
+  gap: 14px !important;
+  align-items: end !important;
+  padding-bottom: 18px !important;
+}
+.calculator-section .calculator-panel label { font-size: 11px !important; line-height: 1.45 !important; }
+.calculator-section .bill-prefix { padding: 0 12px !important; }
+.calculator-section .bill-input,
+.calculator-section .calc-output { padding: 10px !important; font-size: 13px !important; }
+.calculator-section .calculate-button {
+  min-height: 42px !important;
+  padding: 10px 12px !important;
+  font-size: 9px !important;
+  letter-spacing: .08em !important;
+  background: var(--orange) !important;
+  color: #fff5e4 !important;
+}
+.calculator-section .calculate-button:hover { filter: brightness(.96); transform: translateY(-1px); }
+.calculator-section .calculator-results { gap: 12px !important; padding-top: 18px !important; }
+.calculator-section .calculator-results > div {
+  min-width: 0;
+  padding: 16px !important;
+  border-radius: 5px;
+  border-top: 2px solid var(--orange) !important;
+}
+.calculator-section .calculator-results > div:last-child { border-top-color: var(--yellow) !important; }
+.calculator-section .calculator-results h3 {
+  font-size: clamp(19px, 2vw, 24px) !important;
+  line-height: 1.1 !important;
+  margin: 0 0 15px !important;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e7e0d3;
+  letter-spacing: -.04em !important;
+}
+.calculator-section .result-field { margin-bottom: 11px !important; }
+.calculator-section .calc-output { min-height: 36px !important; background: #f6f3eb !important; }
+.calculator-section .calc-help { font-size: 9px !important; line-height: 1.5 !important; }
+.calculator-section .calc-tip,
+.calculator-section .calc-disclaimer { font-size: 10px !important; line-height: 1.65 !important; margin-top: 14px !important; }
+.calculator-section .calc-disclaimer { padding-top: 12px !important; }
+
+@media (max-width: 900px) {
+  .calculator-section .calculator-layout { grid-template-columns: minmax(0, .8fr) minmax(0, 1fr) !important; gap: 24px !important; }
+  .calculator-section .calculator-entry { grid-template-columns: 1fr !important; }
+  .calculator-section .section-title { font-size: clamp(40px, 6vw, 58px) !important; }
+}
+@media (max-width: 700px) {
+  .calculator-section { padding: 44px 0 !important; }
+  .calculator-section .calculator-layout { grid-template-columns: minmax(0, 1fr) !important; gap: 26px !important; }
+  .calculator-section .calculator-intro { gap: 18px !important; }
+  .calculator-section .section-marker { margin-bottom: 16px !important; }
+  .calculator-section .section-title { font-size: clamp(42px, 11vw, 62px) !important; }
+  .calculator-section .section-intro { max-width: 560px !important; }
+  .calculator-section .calculator-entry { grid-template-columns: minmax(0, 1fr) !important; }
+  .calculator-section .calculator-results { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 480px) {
+  .calculator-section .calculator-panel { padding: 16px !important; }
+  .calculator-section .calculator-results { grid-template-columns: minmax(0, 1fr) !important; }
+}
 </style></head><body><header class="site-header"><div class="wrap header-inner"><a class="brand" href="index.html" aria-label="Sunea Solar &amp; Lighting Retail OPC, home"><span class="brand-lockup" aria-hidden="true"><img src="logo.png" alt="" /></span></a><nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="product.html">Our Product</a><a href="why.html">Why Sunea</a></nav><a class="outline-link" href="mailto:suneasalesph@gmail.com?subject=For%20Solar%20quotation&body=Please%20fill%20out%20the%20following%3A%0A%0AName%3A%20%0AMonthly%20Electric%20Bill%3A%20%0AAddress%3A%20">Get Free Solar Quote ↘</a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div><nav class="mobile-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="product.html">Our Product</a><a href="why.html">Why Sunea</a></nav></header><main id="top">
 <section class="page-hero"><div class="wrap"><p class="eyebrow mono">SUNEA SOLAR & LIGHTING RETAIL OPC</p><h1 class="display">Solar packages.<br><span style="color:var(--orange)">Made for your needs.</span></h1><p class="hero-copy">Explore our hybrid solar packages, designed to help homes take a practical step toward energy independence. Request a quotation to confirm the right configuration for your property.</p></div></section>
 <section class="section" id="packages"><div class="wrap"><div class="section-head"><div><p class="section-kicker mono" style="color:var(--orange)">01 / Solar Packages</p><h2 class="section-title display">Choose your<br><em>solar setup.</em></h2></div><p class="section-intro">Three hybrid package options with solar panels, inverter, battery storage, and essential mounting accessories.</p></div><div class="packages">
 <article class="package-card"><span class="package-kicker">Hybrid package / 01</span><h2 class="display">6KW Hybrid Package</h2><p class="package-description">A compact hybrid setup for homes with practical energy needs.</p><p class="package-price">₱225,000</p><ul><li>10 × 630W Sonnex Bifacial Panels</li><li>1 × 6KW Sonnex Hybrid Inverter</li><li>1 × 5KW Sonnex 5KW/100Ah 51.2V LiFePO4 Battery</li><li>Accessories set: railings, L-foot, mid clamp, and end clamp</li></ul><a class="package-action" href="mailto:suneasalesph@gmail.com?subject=For%20Solar%20quotation&body=Please%20fill%20out%20the%20following%3A%0A%0AName%3A%20%0AMonthly%20Electric%20Bill%3A%20%0AAddress%3A%20">Get this package ↗</a></article>
 <article class="package-card featured"><span class="package-kicker">Hybrid package / 02 · Popular choice</span><h2 class="display">8KW Hybrid Package</h2><p class="package-description">More capacity for households looking to support a larger load.</p><p class="package-price">₱340,000</p><ul><li>13 × 630W Sonnex Bifacial Panels</li><li>1 × 8KW Livoltek Hybrid Inverter</li><li>1 × 16KW Livoltek 16KW/314Ah 51.2V LiFePO4 Battery</li><li>Accessories set: railings, L-foot, mid clamp, and end clamp</li></ul><a class="package-action" href="mailto:suneasalesph@gmail.com?subject=For%20Solar%20quotation&body=Please%20fill%20out%20the%20following%3A%0A%0AName%3A%20%0AMonthly%20Electric%20Bill%3A%20%0AAddress%3A%20">Get this package ↗</a></article>
 <article class="package-card"><span class="package-kicker">Hybrid package / 03</span><h2 class="display">12KW Hybrid Package</h2><p class="package-description">A higher-capacity hybrid option for bigger energy requirements.</p><p class="package-price">₱445,000</p><ul><li>20 × 630W Sonnex Bifacial Panels</li><li>1 × 12KW Livoltek Hybrid Inverter</li><li>1 × 16KW Livoltek 16KW/314Ah 51.2V LiFePO4 Battery</li><li>Accessories set: railings, L-foot, mid clamp, and end clamp</li></ul><a class="package-action" href="mailto:suneasalesph@gmail.com?subject=For%20Solar%20quotation&body=Please%20fill%20out%20the%20following%3A%0A%0AName%3A%20%0AMonthly%20Electric%20Bill%3A%20%0AAddress%3A%20">Get this package ↗</a></article></div><p class="package-note">Note: Sonnex is a German brand. Package prices and final system design should be confirmed with SUNEA following a site assessment.</p></div></section>
-<section class="section calculator-section" id="calculator"><div class="wrap calculator-layout"><div class="calculator-intro"><div><p class="section-marker mono">02 / Solar Calculator</p><h2 class="section-title display">Your bill.<br>Your <em>solar estimate.</em></h2></div><p class="section-intro">Enter your average monthly electricity bill to compare two illustrative SUNEA system estimates. Clear results, same calculator logic.</p></div><div class="calculator-panel"><div class="calculator-entry"><div><label for="input-field">Your average monthly electricity bill</label><div class="bill-row"><span class="bill-prefix">₱</span><input class="bill-input" type="number" id="input-field" min="1" step="1" inputmode="decimal" aria-label="Average monthly electricity bill in pesos" placeholder="e.g. 5000"></div></div><button id="btn-calculate" class="calculate-button" type="button">Calculate my estimate ↗</button></div><div class="calculator-results"><div><h3>#BawasBill</h3><div class="result-field"><label for="bawas-bill-system-size-output">System size</label><input class="calc-output" id="bawas-bill-system-size-output" disabled></div><div class="result-field"><label for="bawas-bill-number-of-panels-output">Number of panels</label><input class="calc-output" id="bawas-bill-number-of-panels-output" disabled></div><div class="result-field"><label for="bawas-bill-estimated-monthly-savings-output">Estimated monthly savings*</label><input class="calc-output" id="bawas-bill-estimated-monthly-savings-output" disabled><p class="calc-help">*Savings vary with system utilization and actual usage.</p></div></div><div><h3>#ZeroBill</h3><div class="result-field"><label for="zero-bill-system-size-output">System size</label><input class="calc-output" id="zero-bill-system-size-output" disabled></div><div class="result-field"><label for="zero-bill-number-of-panels-output">Number of panels</label><input class="calc-output" id="zero-bill-number-of-panels-output" disabled></div><div class="result-field"><label for="zero-bill-estimated-monthly-savings-output">Estimated monthly savings**</label><input class="calc-output" id="zero-bill-estimated-monthly-savings-output" disabled><p class="calc-help">**Potential savings with higher utilization: ₱<span id="zero-bill-max-output">—</span> or more.</p></div></div></div><p class="calc-tip">For better system utilization, run energy-intensive appliances during peak solar hours, around 10 AM–2 PM.</p><p class="calc-disclaimer">For #BawasBill, estimates use a conservative 3.9 peak sun hours and 50%–100% system utilization. For #ZeroBill, estimates assume successful Net Metering, 3.9 peak sun hours, and 40%–60% utilization. These are illustrative estimates, not a guarantee of savings or a formal system design.</p></div><aside class="calculator-cta"><div><p class="section-kicker mono">03 / Make it yours</p><h2 class="display">Want a tailored<br>solar <em style="color:var(--orange)">quote?</em></h2><p>Share your latest monthly bill with our team to discuss a setup suited to your property.</p></div><a class="cta-button" href="mailto:suneasalesph@gmail.com?subject=For%20Solar%20quotation&amp;body=Please%20fill%20out%20the%20following%3A%0A%0AName%3A%20%0AMonthly%20Electric%20Bill%3A%20%0AAddress%3A%20">Request a quote ↗</a></aside></div></section>
+<section class="section calculator-section" id="calculator"><div class="wrap calculator-layout"><div class="calculator-intro"><div><p class="section-marker mono">02 / Solar Calculator</p><h2 class="section-title display">Your bill.<br>Your <em>solar estimate.</em></h2></div><p class="section-intro">Enter your average monthly electricity bill to compare two illustrative SUNEA system estimates. Clear results, same calculator logic.</p></div><div class="calculator-panel"><div class="calculator-entry"><div><label for="input-field">Your average monthly electricity bill</label><div class="bill-row"><span class="bill-prefix">₱</span><input class="bill-input" type="number" id="input-field" min="1" step="1" inputmode="decimal" aria-label="Average monthly electricity bill in pesos" placeholder="e.g. 5000"></div></div><button id="btn-calculate" class="calculate-button" type="button">Calculate my estimate ↗</button></div><div class="calculator-results"><div><h3>#BawasBill</h3><div class="result-field"><label for="bawas-bill-system-size-output">System size</label><input class="calc-output" id="bawas-bill-system-size-output" disabled></div><div class="result-field"><label for="bawas-bill-number-of-panels-output">Number of panels</label><input class="calc-output" id="bawas-bill-number-of-panels-output" disabled></div><div class="result-field"><label for="bawas-bill-estimated-monthly-savings-output">Estimated monthly savings*</label><input class="calc-output" id="bawas-bill-estimated-monthly-savings-output" disabled><p class="calc-help">*Savings vary with system utilization and actual usage.</p></div></div><div><h3>#ZeroBill</h3><div class="result-field"><label for="zero-bill-system-size-output">System size</label><input class="calc-output" id="zero-bill-system-size-output" disabled></div><div class="result-field"><label for="zero-bill-number-of-panels-output">Number of panels</label><input class="calc-output" id="zero-bill-number-of-panels-output" disabled></div><div class="result-field"><label for="zero-bill-estimated-monthly-savings-output">Estimated monthly savings**</label><input class="calc-output" id="zero-bill-estimated-monthly-savings-output" disabled><p class="calc-help">**Potential savings with higher utilization: ₱<span id="zero-bill-max-output">—</span> or more.</p></div></div></div><p class="calc-tip">For better system utilization, run energy-intensive appliances during peak solar hours, around 10 AM–2 PM.</p><p class="calc-disclaimer">For #BawasBill, estimates use a conservative 3.9 peak sun hours and 50%–100% system utilization. For #ZeroBill, estimates assume successful Net Metering, 3.9 peak sun hours, and 40%–60% utilization. These are illustrative estimates, not a guarantee of savings or a formal system design.</p></div></div></section>
+<section class="cta calculator-quote-cta"><div class="wrap cta-inner"><div><p class="section-kicker mono">03 / Make it yours</p><h2 class="display">Want a tailored<br>solar <em>quote?</em></h2></div><div><p>Share your latest monthly bill with our team to discuss a setup suited to your property.</p><a class="cta-button" href="mailto:suneasalesph@gmail.com?subject=For%20Solar%20quotation&amp;body=Please%20fill%20out%20the%20following%3A%0A%0AName%3A%20%0AMonthly%20Electric%20Bill%3A%20%0AAddress%3A%20">REQUEST A QUOTE ↗</a></div></div></section>
 </main><footer id="contact" class="footer"><div class="wrap"><div class="footer-main"><a href="index.html" class="brand footer-brand" aria-label="Sunea Solar &amp; Lighting Retail OPC, back to top"><span class="brand-lockup" aria-hidden="true"><img src="logo.png" alt="" /></span></a><div class="footer-contact"><section aria-labelledby="head-office-heading"><h2 id="head-office-heading" class="contact-label office-heading">Head office</h2><p class="office-company">Sunea Solar &amp; Lighting Retail OPC</p><div class="contact-item"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a class="contact-value" href="mailto:suneasalesph@gmail.com">suneasalesph@gmail.com</a></div><div class="contact-item"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><address class="contact-value">2nd Floor Ysabelle Building, Belfast Avenue,<br>Quezon City, Philippines 1118</address></div></section><section aria-labelledby="branch-heading"><h2 id="branch-heading" class="contact-label office-heading">Branch</h2><div class="contact-item"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><address class="contact-value">B6 L1-B Mc-Arthur Highway, Juliana City,<br>San Fernando, Pampanga 2000, Philippines</address></div><div class="contact-item"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.2 18.8a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.09 4.2 2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72l.45 2.75a2 2 0 0 1-.57 1.68L7.7 9.4a16 16 0 0 0 6 6l1.25-1.25a2 2 0 0 1 1.68-.57l2.75.45a2 2 0 0 1 1.72 1.89Z"/></svg><a class="contact-value" href="tel:0301952813">030 195 2813</a></div><div class="contact-item"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.2 18.8a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.09 4.2 2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72l.45 2.75a2 2 0 0 1-.57 1.68L7.7 9.4a16 16 0 0 0 6 6l1.25-1.25a2 2 0 0 1 1.68-.57l2.75.45a2 2 0 0 1 1.72 1.89Z"/></svg><a class="contact-value" href="tel:0458600901">0458600901</a></div></section></div></div><div class="footer-bottom"><span>© 2026 Sunea Solar & Lighting Retail OPC. All rights reserved.</span><a href="index.html">Return to home ↗</a></div></div></footer><script>
 const menuButton=document.querySelector('.menu-toggle');const mobileNav=document.querySelector('.mobile-nav');
 if(menuButton&&mobileNav){menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Close navigation':'Open navigation');mobileNav.classList.toggle('open',open)});mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Open navigation');mobileNav.classList.remove('open')}));}
