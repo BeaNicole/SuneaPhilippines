@@ -1,0 +1,577 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Solar packages and solar savings calculator from Sunea Solar & Lighting Retail OPC."><title>Our Product | Sunea Solar</title><link rel="icon" type="image/png" href="favicon.png"><style>
+/* IMAGE GUIDE: Keep logo.png, banner.png, work1.png, work2.png, and work3.png beside index.html. Suggested sizes: logo 900 x 288 px (frame 150 x 48), banner 1920 x 1080 px (center subject; mobile crops sides), each work photo 1200 x 900 px (cover crop). */
+:root{--orange:#e85d20;--yellow:#efb936;--paper:#f6f3eb;--ink:#292722;--muted:#777064;--solar-image:url("banner.png");font-family:Arial,Helvetica,sans-serif;color:var(--ink);scroll-behavior:smooth}*{box-sizing:border-box}body{margin:0;background:var(--paper)}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1260px,calc(100% - 48px));margin:auto}.mono,.eyebrow,.label,.metric-caption{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase}.display{font-family:"Space Grotesk",Arial,sans-serif;font-weight:400;letter-spacing:-.065em}.site-header{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(246,243,235,.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(55,52,45,.12)}.header-inner{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px}.sun-mark{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--orange);color:#fff8e8;transition:transform .25s}.brand:hover .sun-mark{transform:rotate(12deg)}.brand-name{font-size:11px;font-weight:700;letter-spacing:.16em;line-height:1.25;text-transform:uppercase}.brand-lockup{display:flex;align-items:center;justify-content:center;width:150px;height:48px;overflow:hidden;color:var(--ink)}.brand-lockup img{display:block;width:100%;height:100%;object-fit:contain}.brand-symbol{width:48px;display:grid;place-items:center;flex:0 0 48px;background:var(--orange);color:#fff8e8}.brand-copy{display:flex;flex-direction:column;justify-content:center;gap:2px;padding:0 10px;line-height:1.15}.brand-copy strong{font-size:11px;letter-spacing:.18em}.brand-copy small{font-size:8px;letter-spacing:.04em;text-transform:uppercase}.footer-main{grid-template-columns:minmax(200px,.7fr) 2fr;gap:34px}.footer-contact{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}.office-heading{font-size:10px;color:var(--yellow);margin:0 0 14px}.office-company{font-size:12px;font-weight:600;margin:0 0 15px;color:#f6f3eb}.contact-item{margin-top:12px}.contact-item address{font-style:normal}.contact-value{display:block;overflow-wrap:anywhere}.contact-item a:hover{color:var(--yellow)}.brand-name span{font-weight:400;color:var(--muted)}.main-nav{display:flex;gap:34px;font-size:12px;color:#5e5a51}.main-nav a,.outline-link{transition:color .2s,border-color .2s}.main-nav a:hover,.outline-link:hover{color:var(--orange)}.outline-link{border:1px solid rgba(51,47,41,.28);border-radius:30px;padding:11px 16px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.menu-toggle{display:none;background:none;border:1px solid rgba(51,47,41,.25);border-radius:50%;height:40px;width:40px;color:var(--ink)}.mobile-nav{display:none}.hero{position:relative;min-height:840px;padding:150px 0 64px;display:flex;align-items:flex-end;color:#fbf4e5;background-image:linear-gradient(to top,rgba(33,30,26,.86),rgba(33,30,26,.12) 62%,rgba(33,30,26,.08)),var(--solar-image);background-size:cover;background-position:center}.hero-content{width:100%;display:grid;grid-template-columns:1fr auto;align-items:end;gap:24px}.eyebrow{font-size:10px;color:#f7d77b;display:flex;align-items:center;gap:12px;margin:0 0 24px}.eyebrow:before{content:"";width:36px;height:1px;background:currentColor}.hero h1{font-size:clamp(64px,10vw,148px);line-height:.82;margin:0;max-width:980px}.hero-copy{font-size:17px;line-height:1.6;color:rgba(243,235,221,.88);max-width:480px;margin:28px 0 26px}.text-link{display:inline-flex;align-items:center;gap:12px;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.circle-arrow{width:40px;height:40px;border:1px solid rgba(255,255,255,.55);border-radius:50%;display:grid;place-items:center;transition:background .2s,color .2s}.text-link:hover .circle-arrow{background:var(--yellow);color:var(--ink)}.hero-index{display:flex;gap:18px;align-items:center;color:rgba(255,255,255,.75);font-size:9px;letter-spacing:.14em;text-transform:uppercase}.hero-index strong{font-family:ui-monospace,monospace;font-weight:400}.section{padding:110px 0}.premise{display:grid;grid-template-columns:1fr 1.7fr;gap:9%;align-items:start}.section-marker{font-size:10px;color:var(--orange);padding-top:8px}.rule{height:1px;background:#c9c2b3;margin-top:28px}.premise h2,.section-title{font-size:clamp(44px,6vw,82px);line-height:.95;margin:0}.premise h2 em,.section-title em{font-style:normal;color:var(--orange)}.two-copy{display:grid;grid-template-columns:1fr 1fr;gap:28px;color:#625d53;font-size:14px;line-height:1.8;margin-top:30px}.two-copy p{margin:0}.work{background:var(--ink);color:var(--paper)}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:48px}.section-kicker{font-size:10px;color:var(--yellow);margin:0 0 18px}.section-title{font-size:clamp(52px,7vw,100px)}.section-title em{color:var(--orange)}.section-intro{max-width:340px;color:#c7c0b4;font-size:13px;line-height:1.7}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px}.filter-btn{border:1px solid rgba(255,255,255,.25);border-radius:30px;padding:10px 15px;background:transparent;color:#d4cec3;font-size:10px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:.2s}.filter-btn:hover{border-color:#fff}.filter-btn[aria-pressed="true"]{background:var(--yellow);border-color:var(--yellow);color:var(--ink)}.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project-card{border:1px solid rgba(255,255,255,.16);background:#33312b;transition:transform .25s,border-color .25s}.project-card:hover{transform:translateY(-5px);border-color:rgba(239,185,54,.7)}.project-card[hidden]{display:none}.project-photo{height:290px;position:relative;background-image:linear-gradient(to top,rgba(32,30,27,.7),transparent 50%),var(--project-image,var(--solar-image));background-size:cover;background-position:center 58%;display:flex;align-items:flex-end;padding:20px}.project-card:nth-child(2) .project-photo{background-position:70% 50%}.project-card:nth-child(3) .project-photo{background-position:34% 60%}.case-label{position:absolute;top:18px;left:18px;font:10px ui-monospace,monospace;color:rgba(255,255,255,.88);letter-spacing:.1em}.project-name{font-size:38px;color:#fff;margin:0;letter-spacing:-.05em}.project-info{padding:18px}.project-type-line{display:flex;justify-content:space-between;gap:12px;color:#aaa397;font-size:9px;letter-spacing:.1em;text-transform:uppercase}.project-type-line span:last-child{color:var(--yellow)}.project-metric{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;border-top:1px solid rgba(255,255,255,.15);padding-top:15px;margin-top:22px}.project-size{font-size:30px;letter-spacing:-.05em}.metric-caption{text-align:right;max-width:145px;color:#bdb6aa;font-size:8px;line-height:1.6;letter-spacing:.05em}.sample-note{text-align:right;color:#aaa397;font-size:9px;margin:20px 0 0;letter-spacing:.08em;text-transform:uppercase}.sun-section{background:#e9b32e;position:relative;overflow:hidden}.sun-section:after,.sun-section:before{content:"";position:absolute;border:1px solid rgba(48,42,30,.14);border-radius:50%;width:560px;height:560px;right:8%;top:-47%;pointer-events:none}.sun-section:before{width:420px;height:420px;right:14%;top:-34%}.sun-copy{display:grid;grid-template-columns:1.5fr .7fr;gap:9%;align-items:end;position:relative;z-index:1}.sun-copy h2{font-size:clamp(58px,8vw,112px);line-height:.85;margin:20px 0 0}.sun-copy p{color:#473c25;font-size:14px;line-height:1.8;margin:0}.steps{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(48,42,30,.3);margin-top:64px;position:relative;z-index:1}.step{padding:26px 24px 0 0;border-right:1px solid rgba(48,42,30,.24);margin-right:24px}.step:last-child{border:0;margin:0}.step .label{font-size:9px;color:#684918}.step h3{font-size:29px;font-weight:400;letter-spacing:-.04em;margin:20px 0 8px}.step p{max-width:300px;color:#51442a;font-size:12px;line-height:1.7;margin:0}.impact-head{display:grid;grid-template-columns:1fr .55fr;gap:10%;align-items:end}.impact-head p{font-size:13px;color:#625d53;line-height:1.8;margin:0}.metrics{display:grid;grid-template-columns:repeat(4,1fr);margin-top:62px;border-top:1px solid #c9c2b3}.metric{padding:26px 18px;border-right:1px solid #c9c2b3}.metric:first-child{padding-left:0}.metric:last-child{border:0}.metric-value{font-size:clamp(44px,6vw,78px);line-height:1;letter-spacing:-.06em}.metric-unit{font:10px ui-monospace,monospace;color:var(--orange);text-transform:uppercase}.metric-caption-light{font-size:10px;color:#625d53;line-height:1.6;max-width:175px;margin-top:18px}.impact-note{font:9px ui-monospace,monospace;color:var(--muted);letter-spacing:.09em;text-transform:uppercase;margin-top:18px}.cta{position:relative;overflow:hidden;background:var(--orange);color:#fff5e4;padding:110px 0}.cta:after{content:"";position:absolute;inset:0 0 0 auto;width:48%;opacity:.2;background-image:linear-gradient(90deg,var(--orange),transparent),var(--solar-image);background-size:cover;background-position:center}.cta-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.6fr .65fr;gap:8%;align-items:end}.cta h2{font-size:clamp(60px,8vw,112px);line-height:.84;margin:22px 0 0}.cta .section-kicker{color:#ffdc8e}.cta p{color:#ffead3;font-size:13px;line-height:1.8;margin:0 0 23px}.cta-button{display:inline-flex;align-items:center;gap:12px;border-radius:30px;background:#f2c34e;padding:15px 20px;color:#30251a;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:background .2s}.cta-button:hover{background:#fff0be}.footer{background:var(--ink);color:#e8e1d5;padding:52px 0 28px}.footer-main{display:grid;grid-template-columns:1fr 1.35fr;gap:30px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.2)}.footer-brand .sun-mark{width:48px;height:48px}.footer-brand .brand-name{font-size:10px}.footer-contact{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.contact-item{display:flex;align-items:flex-start;gap:10px}.contact-icon{color:var(--yellow);width:15px;height:15px;flex:0 0 15px;margin-top:2px}.contact-label{font:9px ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:#aaa397;margin:0 0 9px}.contact-value{font-size:11px;line-height:1.55;margin:0;color:#e8e1d5}.footer-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:20px;color:#a9a297;font:8px ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase}.footer-bottom a{color:#e8e1d5}.footer-bottom a:hover{color:var(--yellow)}.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.in-view{opacity:1;transform:translateY(0)}:focus-visible{outline:2px solid var(--yellow);outline-offset:4px}@media(max-width:850px){.main-nav,.outline-link{display:none}.menu-toggle{display:grid;place-items:center}.mobile-nav.open{display:grid;gap:18px;padding:20px 24px 24px;border-top:1px solid rgba(55,52,45,.12);background:var(--paper);font-size:14px}.hero{min-height:760px}.hero-content{grid-template-columns:1fr}.hero-index{justify-content:space-between}.premise{grid-template-columns:1fr;gap:35px}.section-head{display:block}.section-intro{margin-top:20px}.project-grid{grid-template-columns:1fr 1fr}.project-card:last-child{grid-column:1/-1}.sun-copy,.impact-head{grid-template-columns:1fr;gap:24px}.footer-main{grid-template-columns:1fr}.footer-contact{max-width:720px}}@media(max-width:560px){.wrap{width:calc(100% - 36px)}.section{padding:78px 0}.hero{min-height:700px}.hero h1{font-size:clamp(60px,17vw,88px)}.hero-copy{font-size:15px}.two-copy{grid-template-columns:1fr;gap:15px}.section-head{margin-bottom:34px}.project-grid{grid-template-columns:1fr}.project-card:last-child{grid-column:auto}.project-photo{height:250px}.sun-copy h2{font-size:clamp(52px,14vw,76px)}.steps{grid-template-columns:1fr;margin-top:42px}.step{padding:20px 0;border-right:0;border-bottom:1px solid rgba(48,42,30,.25);margin:0}.step:last-child{border-bottom:0}.metrics{grid-template-columns:1fr 1fr}.metric{padding:20px 12px;border-bottom:1px solid #c9c2b3}.metric:nth-child(2){border-right:0}.metric:nth-child(3){padding-left:0}.metric:nth-child(4){border:0}.metric:first-child{padding-left:0}.cta{padding:78px 0}.cta-inner{grid-template-columns:1fr;gap:28px}.cta h2{font-size:clamp(56px,15vw,82px)}.footer{padding-top:40px}.footer-contact{grid-template-columns:1fr;gap:22px}.footer-bottom{flex-direction:column;align-items:flex-start}.footer-bottom a{order:-1}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+/* Keep the header, hero, sections and footer on the same horizontal gutters. */
+.wrap{width:min(1260px,calc(100% - 96px))}
+
+  /* About Layout */
+.about-layout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(36px,6vw,88px);align-items:start}
+
+/* About Photo */
+.about-photo{position:relative;aspect-ratio:4/5;overflow:hidden;background:#d8d0bf;margin:28px 0 0}
+
+/* Photo Image */
+.about-photo img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* Photo Overlay */
+.about-photo:after{content:"";position:absolute;inset:30% 0 0;background:linear-gradient(transparent,rgba(33,30,26,.6))}
+
+/* Photo Caption */
+.about-photo figcaption{position:absolute;z-index:1;left:24px;bottom:24px;max-width:280px;color:#fbf4e5;font-size:clamp(32px,3vw,42px);line-height:1.05;letter-spacing:-.05em}
+
+/* Main About Heading */
+#approach > .wrap > div:last-child > h2.display{font-size:clamp(48px,6vw,88px);line-height:.98;letter-spacing:-.055em;margin-bottom:32px}
+
+/* Readable About copy */
+#approach .about-intro p,#approach .company-details article p,#approach .photo-note{text-align:left!important;text-justify:auto}
+
+/* Italic Emphasis */
+#approach em{font-style:italic}
+
+/* Company Details */
+#approach .company-details article{margin-bottom:1.75rem}
+
+/* Company Details Headings */
+#approach .company-details h3{margin-bottom:.65rem}
+
+/* Photo Note */
+#approach .photo-note{font-style:italic;opacity:.75;margin-top:.75rem}
+
+/* Responsive Mobile Layout */
+@media(max-width:768px){
+  .about-layout{grid-template-columns:1fr;gap:36px}
+  #approach > .wrap > div:last-child > h2.display{font-size:clamp(42px,10vw,64px);line-height:1;margin-bottom:24px}
+  .about-photo figcaption{font-size:clamp(30px,8vw,38px)}
+}
+  
+  
+  .photo-note,.placeholder-note{font:9px ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:#777064;line-height:1.7}
+.photo-note{margin:12px 0 0}
+.about-intro{max-width:650px;color:#625d53;font-size:14px;line-height:1.8;margin:24px 0 0}
+.company-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 32px;border-top:1px solid #c9c2b3;padding-top:25px;margin-top:34px}
+.company-details article:first-child{grid-column:1/-1}
+.company-details h3{font:10px ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin:0}
+.company-details p{font-size:13px;line-height:1.7;color:#625d53;margin:11px 0 0}
+.placeholder-note{margin:23px 0 0}
+.footer-main{grid-template-columns:180px minmax(0,1fr);gap:40px;align-items:start}
+.footer-contact{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+@media(max-width:850px){.wrap{width:calc(100% - 64px)}.about-layout{grid-template-columns:1fr;gap:42px}.about-photo{max-height:560px}.footer-main{grid-template-columns:1fr;gap:30px}.footer-contact{max-width:none}}
+@media(max-width:560px){.wrap{width:calc(100% - 36px)}.company-details{grid-template-columns:1fr;gap:21px}.company-details article:first-child{grid-column:auto}.footer-contact{grid-template-columns:1fr;gap:24px}}
+@media(max-width:1023px){.wrap{width:calc(100% - 64px)}}
+@media(max-width:767px){.about-layout{grid-template-columns:1fr;gap:42px}.about-photo{max-height:560px}.footer-main{grid-template-columns:1fr;gap:30px}.footer-contact{max-width:none}}
+@media(max-width:639px){.wrap{width:calc(100% - 40px)}.company-details{grid-template-columns:1fr;gap:21px}.company-details article:first-child{grid-column:auto}.footer-contact{grid-template-columns:1fr;gap:24px}}
+@media(min-width:768px) and (max-width:850px){.about-layout{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}.footer-main{grid-template-columns:180px minmax(0,1fr)}.footer-contact{max-width:none}}
+@media(min-width:851px){.footer-main{grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:40px;align-items:start}.footer-contact{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}}
+.about-photo img{transform:scale(1.001);transition:transform 1s cubic-bezier(.2,.7,.2,1)}.about-photo:hover img{transform:scale(1.035)}
+.project-card{transition:transform .35s ease,border-color .35s ease}.project-card:hover{transform:translateY(-5px);border-color:rgba(239,185,54,.65)}
+.sun-section:after{animation:solar-breathe 7s ease-in-out infinite alternate}@keyframes solar-breathe{from{transform:scale(1);opacity:.7}to{transform:scale(1.04);opacity:1}}
+@media(prefers-reduced-motion:reduce){.project-card:hover,.about-photo:hover img{transform:none}}
+
+/* About section: open editorial layout with clear content groups. */
+#approach .about-layout{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);grid-template-areas:"heading intro" "photo photo" "note note" "details details";column-gap:clamp(44px,8vw,112px);row-gap:0;align-items:start}
+#approach .about-heading{grid-area:heading;align-self:center;min-width:0}
+#approach .section-marker{margin:0 0 22px;padding-top:0}
+#approach .about-heading h2{font-size:clamp(50px,5.6vw,76px);line-height:.98;letter-spacing:-.055em;margin:0;max-width:11ch}
+#approach .about-heading h2 em{color:var(--orange)}
+#approach .about-intro{grid-area:intro;max-width:64ch;margin:0;color:#625d53;font-size:14px;line-height:1.9}
+#approach .about-intro p{margin:0 0 18px}
+#approach .about-intro p:last-child{margin-bottom:0}
+#approach .about-photo{grid-area:photo;position:relative;width:100%;aspect-ratio:2/1;max-height:560px;overflow:hidden;background:#d8d0bf;margin:clamp(44px,6vw,76px) 0 0}
+#approach .about-photo img{display:block;width:100%;height:100%;object-fit:cover}
+#approach .about-photo:after{display:none}
+#approach .photo-note{grid-area:note;margin:12px 0 0;max-width:none;text-align:left!important}
+#approach .company-details{grid-area:details;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(26px,4vw,58px);align-items:start;border-top:1px solid #c9c2b3;padding-top:28px;margin-top:clamp(46px,6vw,76px)}
+#approach .company-details article{min-width:0;margin:0}
+#approach .company-details article:first-child{grid-column:auto}
+#approach .company-details h3{line-height:1.5;margin:0}
+#approach .company-details p{font-size:13px;line-height:1.8;color:#625d53;margin:14px 0 0;text-align:justify!important;text-justify:inter-word;hyphens:auto}
+#approach .about-intro p,#approach .company-details article p{ text-align:justify!important;text-justify:inter-word;hyphens:auto }
+@media(max-width:800px){
+  #approach .about-layout{display:block}
+  #approach .about-heading{margin-bottom:24px}
+  #approach .about-heading h2{font-size:clamp(48px,8vw,68px);max-width:12ch}
+  #approach .about-photo{aspect-ratio:16/10;max-height:480px;margin-top:30px}
+  #approach .company-details{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 36px;margin-top:46px}
+}
+@media(max-width:640px){
+  #approach .about-layout{width:calc(100% - 36px)}
+  #approach .about-heading h2{font-size:clamp(42px,12vw,58px)}
+  #approach .about-intro{font-size:14px;line-height:1.85}
+  #approach .about-photo{aspect-ratio:4/3;max-height:400px;margin-top:26px}
+  #approach .company-details{grid-template-columns:minmax(0,1fr);gap:26px;margin-top:40px;padding-top:24px}
+}
+
+/* Project showcase: one horizontal row with a seamless swipe loop. */
+#work .project-scroll-hint{display:flex;justify-content:flex-end;align-items:center;gap:8px;color:#aaa397;font-size:9px;margin:-12px 0 14px}
+#work .project-scroll-hint span{font-size:15px;color:var(--yellow)}
+#work .project-carousel{position:relative;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-ms-overflow-style:none;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-behavior:auto;touch-action:pan-x;cursor:grab;outline:none;-webkit-overflow-scrolling:touch}
+#work .project-carousel::-webkit-scrollbar{display:none}
+#work .project-carousel:focus-visible{outline:2px solid var(--yellow);outline-offset:5px}
+#work .project-carousel.is-dragging{cursor:grabbing;user-select:none}
+#work .project-grid{position:relative;display:flex;flex-wrap:nowrap;align-items:stretch;gap:18px;width:max-content;min-width:100%}
+#work .project-card{flex:0 0 clamp(280px,32vw,390px);min-width:0;scroll-snap-align:start;scroll-snap-stop:always}
+#work .project-card[hidden]{display:none}
+@media(max-width:850px){#work .project-card{flex-basis:clamp(280px,70vw,360px)}}
+@media(max-width:560px){#work .project-card{flex-basis:82vw}}
+@media(prefers-reduced-motion:reduce){#work .project-carousel{scroll-behavior:auto}}
+
+/* More visible swipe cues and a matching testimonial loop. */
+#work .project-scroll-hint,#testimonials .testimonial-scroll-hint{display:flex;justify-content:flex-end;align-items:center;gap:10px;color:var(--yellow);font-size:11px;font-weight:700;letter-spacing:.12em;margin:0 0 16px;text-shadow:0 1px 10px rgba(0,0,0,.28)}
+#work .project-scroll-hint span,#testimonials .testimonial-scroll-hint span{display:inline-grid;place-items:center;width:30px;height:30px;border:1px solid rgba(239,185,54,.65);border-radius:50%;font-size:17px;animation:swipe-cue 1.1s ease-in-out infinite alternate}
+@keyframes swipe-cue{from{transform:translateX(-2px)}to{transform:translateX(4px)}}
+#testimonials{background:#eee9dd;color:var(--ink)}
+#testimonials .section-intro{color:#625d53}
+#testimonials .section-title em{color:var(--orange)}
+#testimonials .testimonial-scroll-hint{color:var(--orange);text-shadow:none}
+#testimonials .testimonial-scroll-hint span{border-color:rgba(232,93,32,.55)}
+#testimonials .testimonial-carousel{position:relative;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-ms-overflow-style:none;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;touch-action:pan-x;cursor:grab;outline:none;-webkit-overflow-scrolling:touch}
+#testimonials .testimonial-carousel::-webkit-scrollbar{display:none}
+#testimonials .testimonial-carousel:focus-visible{outline:2px solid var(--orange);outline-offset:5px}
+#testimonials .testimonial-carousel.is-dragging{cursor:grabbing;user-select:none}
+#testimonials .testimonial-track{position:relative;display:flex;flex-wrap:nowrap;align-items:stretch;gap:18px;width:max-content;min-width:100%}
+#testimonials .testimonial-card{flex:0 0 clamp(320px,42vw,500px);min-width:0;min-height:300px;padding:clamp(24px,3vw,38px);display:flex;flex-direction:column;justify-content:space-between;scroll-snap-align:start;scroll-snap-stop:always;border:1px solid #d3ccbc;background:#f8f5ed}
+#testimonials .testimonial-index{color:var(--orange);font-size:9px}
+#testimonials .testimonial-quote{margin:30px 0;max-width:34ch;color:#3b3932;font-size:clamp(21px,2.4vw,30px);line-height:1.4;letter-spacing:-.025em}
+#testimonials .testimonial-quote p{margin:0}
+#testimonials .testimonial-attribution{display:flex;flex-direction:column;gap:5px;border-top:1px solid #d3ccbc;padding-top:15px;color:#292722;font-size:12px}
+#testimonials .testimonial-attribution span{color:#777064;font-size:10px}
+#testimonials .testimonial-note{color:#777064;font-size:9px;line-height:1.7;margin:16px 0 0}
+@media(max-width:700px){#testimonials .testimonial-card{flex-basis:84vw;min-height:280px}}
+@media(prefers-reduced-motion:reduce){#work .project-scroll-hint span,#testimonials .testimonial-scroll-hint span{animation:none}}
+/* Round the corners of the About pictures, project cards, feedback cards, and video */
+#work .project-card,
+#testimonials .testimonial-card,
+#approach .about-gallery .about-card,
+video {
+  border-radius: 12px;
+  overflow: hidden;
+}
+</style>
+<style>
+/* Asset guide: place about1.png–about4.png beside index.html at 1200 × 1600 px each (3:4 portrait). Keep process.mp4 beside index.html as well. */
+:root{--orange:#f95d2c;--yellow:#f9951b}
+html body p{text-align:justify!important;text-justify:inter-word;hyphens:auto}
+html body #approach .photo-note{text-align:justify!important}
+.sun-section{background:var(--yellow)}
+.cta-button{background:var(--yellow)}
+#work .project-name{display:flex;align-items:center;gap:9px;font-size:clamp(21px,2vw,26px);line-height:1.1;letter-spacing:-.035em}
+.location-pin{display:inline-flex;flex:0 0 auto;color:var(--yellow)}
+.location-pin svg{display:block;width:1em;height:1em}
+#approach .about-gallery{grid-area:photo;display:flex;align-items:flex-end;gap:clamp(8px,1.35vw,17px);width:100%;height:clamp(340px,45vw,560px);margin:clamp(44px,6vw,76px) 0 0;overflow:visible}
+#approach .about-card{position:relative;isolation:isolate;display:block;flex:1 1 0;min-width:0;height:var(--stair-height);align-self:flex-end;padding:0;border:0;border-radius:2px;overflow:hidden;background:#d8d0bf;color:#fff;cursor:pointer;transform:translateY(0);transition:flex .68s cubic-bezier(.22,.8,.2,1),height .68s cubic-bezier(.22,.8,.2,1),transform .68s cubic-bezier(.22,.8,.2,1),box-shadow .35s ease}
+#approach .about-card:nth-child(1){--stair-height:66%}
+#approach .about-card:nth-child(2){--stair-height:77%}
+#approach .about-card:nth-child(3){--stair-height:88%}
+#approach .about-card:nth-child(4){--stair-height:100%}
+#approach .about-card img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .85s cubic-bezier(.2,.7,.2,1),filter .55s ease}
+#approach .about-card:after{content:"";position:absolute;inset:0;z-index:1;background:rgba(249,93,44,.54);opacity:1;transition:opacity .48s ease}
+#approach .about-card-number{position:absolute;z-index:2;top:14px;left:14px;font:10px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.14em}
+#approach .about-gallery:hover .about-card:not(:hover){flex-grow:.78}
+#approach .about-gallery:hover .about-card:hover{flex-grow:2.35;height:100%;transform:translateY(0);box-shadow:0 18px 38px rgba(41,39,34,.18)}
+#approach .about-gallery:focus-within .about-card:not(:focus){flex-grow:.78}
+#approach .about-gallery:focus-within .about-card:focus{flex-grow:2.35;height:100%;transform:translateY(0);box-shadow:0 18px 38px rgba(41,39,34,.18)}
+#approach .about-card:hover:after,#approach .about-card:focus:after{opacity:0}
+#approach .about-card:hover img,#approach .about-card:focus img{transform:scale(1.045);filter:saturate(1)}
+#approach .about-card:focus-visible{outline:3px solid var(--yellow);outline-offset:4px;z-index:3}
+#approach .photo-note{grid-area:note;margin:12px 0 0;max-width:none;color:var(--muted);font:9px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.06em;line-height:1.7;text-transform:uppercase}
+#quality-check{background:#f6f3eb}
+#quality-check .quality-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:clamp(32px,6vw,84px);align-items:center}
+#quality-check .quality-video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#292722}
+#quality-check .quality-copy .section-marker{margin:0 0 20px;padding:0}
+#quality-check .quality-copy h2{font-size:clamp(38px,5vw,68px);line-height:.98;letter-spacing:-.055em;margin:0 0 22px}
+#quality-check .quality-copy p{color:#625d53;font-size:14px;line-height:1.85;margin:0}
+@media(max-width:800px){
+  #approach .about-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;height:auto;margin-top:32px}
+  #approach .about-card,#approach .about-card:nth-child(n){height:auto;aspect-ratio:3/4;flex:none}
+  #approach .about-gallery:hover .about-card:not(:hover),#approach .about-gallery:focus-within .about-card:not(:focus){flex:none}
+  #approach .about-gallery:hover .about-card:hover,#approach .about-gallery:focus-within .about-card:focus{height:auto;aspect-ratio:3/4;flex:none;transform:translateY(-3px)}
+  #quality-check .quality-layout{grid-template-columns:1fr;gap:28px}
+  #quality-check .quality-copy{max-width:620px}
+}
+@media(max-width:520px){
+  #approach .about-gallery{gap:9px}
+  #approach .about-card-number{top:10px;left:10px}
+  #quality-check .quality-copy h2{font-size:clamp(36px,10vw,52px)}
+}
+@media(prefers-reduced-motion:reduce){
+  #approach .about-card,#approach .about-card img,#approach .about-card:after{transition:none}
+}
+</style>
+<style>
+/* Clean, overlapping photo deck inspired by the supplied reference. */
+#approach .about-gallery{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;gap:0;width:100%;height:auto;min-height:clamp(170px,36vw,450px);margin:clamp(36px,5vw,64px) 0 0;padding:18px 0;overflow:visible;--deck-overlap:clamp(14px,3.8vw,48px)}
+#approach .about-gallery .about-card{position:relative;flex:0 0 clamp(72px,24vw,300px);width:clamp(72px,24vw,300px);height:auto;aspect-ratio:3/4;align-self:center;margin:0 0 0 calc(-1 * var(--deck-overlap));padding:0;border:0;border-radius:12px;overflow:hidden;background:transparent;box-shadow:none!important;transform:rotate(var(--card-rotation)) scale(1);transition:transform .68s cubic-bezier(.2,.75,.15,1),z-index 0s;cursor:pointer}
+#approach .about-gallery .about-card:first-child{margin-left:0}
+#approach .about-gallery .about-card:nth-child(1){--card-rotation:-6deg;z-index:1}
+#approach .about-gallery .about-card:nth-child(2){--card-rotation:3deg;z-index:2}
+#approach .about-gallery .about-card:nth-child(3){--card-rotation:-3deg;z-index:3}
+#approach .about-gallery .about-card:nth-child(4){--card-rotation:6deg;z-index:4}
+#approach .about-gallery .about-card img{display:block;width:100%;height:100%;object-fit:cover;transform:none!important;filter:none!important;transition:none}
+#approach .about-gallery .about-card:after{display:none!important}
+#approach .about-gallery .about-card-number{display:none}
+#approach .about-gallery:hover .about-card:not(:hover),#approach .about-gallery:focus-within .about-card:not(:focus){flex:0 0 clamp(72px,24vw,300px);flex-grow:0}
+#approach .about-gallery:hover .about-card:hover,#approach .about-gallery:focus-within .about-card:focus{flex:0 0 clamp(72px,24vw,300px);height:auto;transform:rotate(0deg) scale(1.07);z-index:100;box-shadow:none!important}
+#approach .about-gallery .about-card:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+#work .project-carousel,#testimonials .testimonial-carousel{scroll-snap-type:none;scroll-behavior:auto;scroll-padding:0}
+#work .project-card,#testimonials .testimonial-card{scroll-snap-align:none;scroll-snap-stop:normal}
+@media(max-width:800px){
+  #approach .about-gallery{display:flex;align-items:center;height:auto;min-height:clamp(150px,38vw,300px);margin-top:32px;--deck-overlap:clamp(14px,3.8vw,30px)}
+  #approach .about-gallery .about-card{flex:0 0 clamp(72px,24vw,192px);width:clamp(72px,24vw,192px);height:auto;aspect-ratio:3/4}
+  #approach .about-gallery:hover .about-card:not(:hover),#approach .about-gallery:focus-within .about-card:not(:focus){flex:0 0 clamp(72px,24vw,192px);flex-grow:0}
+  #approach .about-gallery:hover .about-card:hover,#approach .about-gallery:focus-within .about-card:focus{flex:0 0 clamp(72px,24vw,192px);height:auto;aspect-ratio:3/4;transform:rotate(0deg) scale(1.07);z-index:100}
+}
+@media(max-width:520px){
+  #approach .about-gallery{min-height:150px;--deck-overlap:clamp(12px,3.8vw,20px)}
+  #approach .about-gallery .about-card{flex-basis:clamp(68px,24vw,124px);width:clamp(68px,24vw,124px)}
+  #approach .about-gallery:hover .about-card:not(:hover),#approach .about-gallery:focus-within .about-card:not(:focus){flex-basis:clamp(68px,24vw,124px)}
+  #approach .about-gallery:hover .about-card:hover,#approach .about-gallery:focus-within .about-card:focus{flex-basis:clamp(68px,24vw,124px)}
+}
+</style>
+<style>
+.page-hero{padding:155px 0 76px;background:radial-gradient(ellipse at 50% 30%,rgba(249,93,44,.13),transparent 55%),var(--paper)}
+.page-hero .eyebrow{color:var(--orange)}.page-hero h1{font-size:clamp(58px,9vw,112px);line-height:.9;margin:0;max-width:1000px}.page-hero .hero-copy{color:#625d53;max-width:650px}
+.packages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+.package-card{display:flex;flex-direction:column;padding:28px 24px;border:1px solid #d7d0c3;background:#fbf9f3;min-width:0;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease,background .3s ease}
+.package-card:hover,.package-card:focus-within{transform:translateY(-8px);border-color:var(--orange);box-shadow:0 18px 38px rgba(41,39,34,.14);background:#fffaf3}
+.package-card.featured{background:#302d27;color:#f6f3eb;border-color:#302d27}.package-card.featured .package-description,.package-card.featured li{color:#d1c9bb}.package-card.featured .package-price{color:#f9951b}
+.package-kicker{font:10px ui-monospace,monospace;letter-spacing:.14em;color:var(--orange);text-transform:uppercase}.package-card h2{font-size:clamp(27px,3vw,38px);line-height:1.05;letter-spacing:-.05em;margin:20px 0 8px}.package-price{font-size:clamp(30px,3vw,42px);font-weight:700;letter-spacing:-.05em;margin:8px 0}.package-description{color:#777064;font-size:12px;line-height:1.7;margin:0 0 22px}.package-card ul{padding:18px 0 18px 18px;border-top:1px solid #d7d0c3;margin:0 0 26px;color:#625d53;font-size:12px;line-height:1.8;flex:1}.package-card.featured ul{border-color:#514d45}.package-card li{padding-left:3px;margin-bottom:9px}.package-action{display:block;text-align:center;background:var(--yellow);color:#292722;padding:14px 16px;border-radius:30px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.package-note{font-size:11px;color:#777064;line-height:1.7;margin:22px 0 0}/* SUNEA calculator: distinct layout with the existing brand palette */
+.calculator-section{background:var(--yellow);color:var(--ink);}
+.calculator-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:34px;align-items:start}
+.calculator-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.72fr);gap:clamp(28px,6vw,84px);align-items:end}
+.calculator-section .section-marker{color:var(--ink);opacity:.78}
+.calculator-section .section-title{max-width:760px}
+.calculator-section .section-title em{color:var(--orange)}
+.calculator-section .section-intro{color:#51442a;max-width:460px;margin-top:18px}
+.calculator-panel{padding:clamp(22px,3.4vw,42px);border-radius:4px;background:var(--paper);border:1px solid rgba(41,39,34,.15);box-shadow:0 16px 38px rgba(41,39,34,.09)}
+.calculator-entry{display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,.45fr);gap:24px;align-items:end;padding-bottom:28px;border-bottom:1px solid #d5cdbd}
+.calculator-panel label{display:block;font-size:13px;font-weight:600;margin:0 0 8px;color:var(--ink)}
+.bill-row{display:flex;margin-bottom:0}
+.bill-prefix{display:grid;place-items:center;padding:0 16px;border:1px solid #c9c2b3;border-right:0;border-radius:4px 0 0 4px;background:#fff;color:var(--orange);font-weight:700}
+.bill-input,.calc-output{width:100%;min-width:0;border:1px solid #c9c2b3;border-radius:0 4px 4px 0;padding:13px;font:inherit;background:#fff;color:var(--ink);font-size:16px}
+.calculate-button{width:100%;min-height:48px;border:0;border-radius:4px;background:var(--orange);color:#fff;padding:13px 18px;cursor:pointer;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:filter .2s,transform .2s}
+.calculate-button:hover{background:var(--ink);transform:translateY(-1px)}
+.calculate-button:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.calculator-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding-top:28px}
+.calculator-results>div{min-width:0;padding:24px;background:#fff;border:1px solid #d5cdbd;border-top:4px solid var(--orange)}
+.calculator-results>div:last-child{border-top-color:var(--yellow)}
+.calculator-results h3{font-size:clamp(23px,3vw,32px);letter-spacing:-.04em;margin:0 0 22px;color:var(--ink)}
+.result-field{margin-bottom:16px}.result-field:last-child{margin-bottom:0}
+.calc-output{display:block;border-radius:4px;background:#f6f3eb;min-height:46px;font-size:14px;font-weight:600}
+.calc-help{font-size:11px;color:#625d53;margin:7px 0 0;line-height:1.55}
+.calc-tip,.calc-disclaimer{font-size:12px;color:#51442a;line-height:1.7;margin:18px 0 0}
+.calc-disclaimer{font-size:11px;padding-top:16px;border-top:1px solid rgba(41,39,34,.2)}
+.calculator-cta{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:24px 0 0;border-top:1px solid rgba(41,39,34,.2)}
+.calculator-cta h2{font-size:clamp(34px,4vw,52px);line-height:.95;margin:8px 0 12px}
+.calculator-cta p{color:#51442a;font-size:13px;line-height:1.8;margin:0;max-width:600px}
+.calculator-cta .section-kicker{color:var(--ink);margin-bottom:10px}
+.calculator-cta .cta-button{background:var(--orange);color:#fff5e4;white-space:nowrap}
+@media(max-width:760px){.calculator-intro{grid-template-columns:1fr;gap:18px}.calculator-entry{grid-template-columns:1fr;gap:16px}.calculator-results{gap:12px}.calculator-results>div{padding:18px}.calculator-cta{align-items:flex-start;flex-direction:column}}
+@media(max-width:520px){.calculator-results{grid-template-columns:1fr}.calculator-panel{padding:18px}.calculator-results h3{font-size:25px}.calculator-results label{font-size:12px}}
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:48px}.why-card{border-top:2px solid var(--orange);padding:24px 22px 28px;background:#eee9dd}.why-number{font:10px ui-monospace,monospace;color:var(--orange);letter-spacing:.12em}.why-card h2{font-size:29px;letter-spacing:-.04em;margin:24px 0 12px}.why-card p{font-size:13px;line-height:1.8;color:#625d53;margin:0}.why-band{background:#e9b32e}.why-band-inner{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.why-band h2{font-size:clamp(48px,7vw,88px);line-height:.9;margin:0}.why-band p{font-size:14px;line-height:1.9;color:#51442a}.page-cta{padding:70px 0;background:var(--orange);color:#fff5e4}.page-cta h2{font-size:clamp(44px,7vw,78px);line-height:.9;margin:0 0 20px}.page-cta p{max-width:650px;color:#ffead3;line-height:1.8}
+@media(max-width:850px){.packages{grid-template-columns:1fr 1fr}.package-card:last-child{grid-column:1/-1}.calculator-layout,.why-band-inner{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.page-hero{padding:125px 0 56px}.packages,.why-grid{grid-template-columns:1fr}.package-card:last-child{grid-column:auto}.calculator-panel{padding:18px}.calculator-results{gap:12px}.calculator-results h3{font-size:21px}.calculator-results label{font-size:12px}.why-band-inner{gap:18px}}
+
+/* Package-card refresh: clean light cards at rest; SUNEA orange only on interaction. */
+.packages .package-card,
+.packages .package-card.featured {
+  background: #fff;
+  color: var(--ink, #292722);
+  border: 1px solid #e5dfd6;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(36, 31, 24, .045);
+  transform: none;
+  transition: background .25s ease, color .25s ease, border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+  cursor: pointer;
+}
+.packages .package-card .package-description,
+.packages .package-card.featured .package-description,
+.packages .package-card li,
+.packages .package-card.featured li { color: #68645e; }
+.packages .package-card .package-price,
+.packages .package-card.featured .package-price { color: var(--ink, #292722); }
+.packages .package-card ul,
+.packages .package-card.featured ul { border-color: #eee6dc; }
+.packages .package-card:hover,
+.packages .package-card:focus-within,
+.packages .package-card:focus-visible,
+.packages .package-card.is-selected {
+  background: #fff4e9;
+  color: #292722;
+  border-color: var(--orange, #f47721);
+  box-shadow: 0 16px 34px rgba(232, 93, 32, .16);
+  transform: translateY(-6px);
+}
+.packages .package-card:hover .package-price,
+.packages .package-card:focus-within .package-price,
+.packages .package-card.is-selected .package-price { color: var(--orange, #e85d20); }
+.packages .package-card:hover .package-action,
+.packages .package-card:focus-within .package-action,
+.packages .package-card.is-selected .package-action { background: var(--orange, #e85d20); color: #fff; border-color: var(--orange, #e85d20); }
+@media (prefers-reduced-motion: reduce) { .packages .package-card { transition: none; } }
+
+/* Calculator layout refresh only — calculation JavaScript and page content remain unchanged. */
+.calculator-section{background:var(--yellow);padding-block:clamp(64px,8vw,110px)}
+.calculator-layout{grid-template-columns:minmax(0,1fr);gap:34px;align-items:start}
+.calculator-layout>div:first-child{display:grid;grid-template-columns:minmax(250px,.72fr) minmax(0,1.28fr);grid-template-areas:"marker panel" "heading panel" "intro panel";column-gap:clamp(24px,5vw,70px);align-items:start}
+.calculator-layout>div:first-child>.section-marker{grid-area:marker;margin:0 0 18px}
+.calculator-layout>div:first-child>.section-title{grid-area:heading;max-width:540px;font-size:clamp(44px,5.5vw,76px)}
+.calculator-layout>div:first-child>.section-intro{grid-area:intro;max-width:420px;margin-top:18px!important}
+.calculator-panel{grid-area:panel;margin-top:0!important;padding:clamp(22px,3vw,38px);border:1px solid rgba(41,39,34,.1);border-radius:18px;background:#fff;box-shadow:0 18px 45px rgba(41,39,34,.13)}
+.bill-row{margin-top:10px}
+.bill-prefix{background:#f6f3eb;border-color:#d1d7df;color:var(--ink);font-weight:700}
+.bill-input,.calc-output{border-color:#d1d7df}
+.bill-input:focus{outline:2px solid var(--orange);outline-offset:2px}
+.calculate-button{background:var(--orange);color:#fff;padding:14px 18px;font-weight:700;letter-spacing:.04em;border-radius:8px}
+.calculate-button:hover{background:var(--orange);transform:translateY(-1px)}
+.calculator-results{gap:16px}
+.calculator-results>div{min-width:0;padding:18px;border:1px solid #e5dfd3;border-radius:12px;background:#fbfaf7}
+.calculator-results h3{padding-bottom:12px;border-bottom:1px solid #e5dfd3}
+.calc-output{border-radius:7px;background:#f0eee8;font-weight:600}
+.calc-help,.calc-tip,.calc-disclaimer{overflow-wrap:anywhere}
+.calculator-cta{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:26px 30px;border:1px solid rgba(41,39,34,.18);border-radius:16px;background:rgba(255,255,255,.42)}
+.calculator-cta .section-kicker{margin-bottom:8px}
+.calculator-cta h2{font-size:clamp(34px,4vw,52px);margin:0;flex:1}
+.calculator-cta>p:not(.section-kicker){max-width:430px;margin:0}
+.calculator-cta .cta-button{flex-shrink:0;background:var(--orange);color:#fff5e4}
+.calculator-cta .cta-button:hover{background:var(--orange)}
+@media(max-width:850px){.calculator-layout>div:first-child{grid-template-columns:minmax(0,1fr);grid-template-areas:"marker" "heading" "intro" "panel";row-gap:0}.calculator-panel{margin-top:24px!important}.calculator-cta{align-items:flex-start;flex-direction:column;gap:16px}.calculator-cta h2{font-size:clamp(38px,7vw,56px)}}
+@media(max-width:560px){.calculator-section{padding-block:64px}.calculator-panel{padding:18px}.calculator-results{grid-template-columns:1fr;gap:14px}.calculator-results>div{padding:15px}.calculator-results h3{font-size:23px}.calculator-cta{padding:22px}.calculator-cta>p:not(.section-kicker){font-size:13px}}
+
+</style><style>
+
+/* Final readability/layout correction — keep the calculator formula untouched. */
+.calculator-section {
+  background: var(--yellow) !important;
+  color: var(--ink);
+  padding-block: clamp(56px, 7vw, 96px);
+  overflow: hidden;
+}
+.calculator-section .wrap.calculator-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 44px);
+  width: min(1260px, calc(100% - 48px));
+  margin-inline: auto;
+  align-items: start;
+}
+.calculator-section .calculator-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(260px, .75fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  min-width: 0;
+}
+.calculator-section .calculator-intro > div { min-width: 0; }
+.calculator-section .section-marker {
+  color: var(--ink);
+  opacity: .85;
+  margin-bottom: 16px;
+}
+.calculator-section .section-title {
+  font-size: clamp(42px, 5.2vw, 74px);
+  line-height: .98;
+  letter-spacing: -.055em;
+  max-width: 660px;
+  overflow-wrap: normal;
+}
+.calculator-section .section-title em { color: var(--orange); }
+.calculator-section .section-intro {
+  color: var(--ink);
+  opacity: .85;
+  max-width: 440px;
+  margin: 0 0 4px;
+  line-height: 1.75;
+  font-size: 15px;
+}
+.calculator-section .calculator-panel {
+  width: 100%;
+  min-width: 0;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid rgba(41,39,34,.18);
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(41,39,34,.08);
+}
+.calculator-section .calculator-results > div {
+  min-width: 0;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e5dfd6;
+  border-radius: 10px;
+}
+.calculator-section .calculator-results h3 { color: var(--ink); }
+.calculator-section .calc-output { color: var(--ink); background: #f6f3eb; }
+.calculator-section .calculate-button {
+  background: var(--orange);
+  color: var(--paper);
+  border-radius: 6px;
+}
+.calculator-section .calculate-button:hover { background: var(--orange); filter: brightness(.96); }
+.calculator-section .calculator-cta {
+  position: static;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 22px 32px;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: clamp(22px, 3vw, 34px);
+  border: 1px solid rgba(41,39,34,.2);
+  border-radius: 14px;
+  background: rgba(246,243,235,.72);
+}
+.calculator-section .calculator-cta > div { min-width: 0; }
+.calculator-section .calculator-cta .section-kicker { color: var(--ink); margin-bottom: 10px; }
+.calculator-section .calculator-cta h2 {
+  font-size: clamp(32px, 4vw, 50px);
+  line-height: 1.02;
+  letter-spacing: -.05em;
+  margin: 0 0 12px;
+  overflow-wrap: normal;
+}
+.calculator-section .calculator-cta p:not(.section-kicker) {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 620px;
+}
+.calculator-section .calculator-cta .cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  background: var(--orange);
+  color: var(--paper);
+  border-radius: 999px;
+  padding: 16px 24px;
+  align-self: center;
+}
+@media (max-width: 760px) {
+  .calculator-section .calculator-intro { grid-template-columns: minmax(0,1fr); gap: 16px; }
+  .calculator-section .calculator-entry { grid-template-columns: minmax(0,1fr); }
+  .calculator-section .calculator-results { grid-template-columns: minmax(0,1fr); }
+  .calculator-section .calculator-cta { grid-template-columns: minmax(0,1fr); }
+  .calculator-section .calculator-cta .cta-button { justify-self: start; white-space: normal; }
+}
+
+
+/* Calculator cleanup: independent intro, calculator panel, and quote CTA. Formula untouched. */
+.calculator-section { background: var(--yellow) !important; color: var(--ink); padding: clamp(56px, 7vw, 96px) 0; overflow: visible; }
+.calculator-section .wrap.calculator-layout { width: min(1120px, calc(100% - 48px)); margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: start; }
+.calculator-section .calculator-intro { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(240px, .7fr); gap: clamp(24px, 5vw, 72px); align-items: end; width: 100%; min-width: 0; }
+.calculator-section .calculator-intro > div { min-width: 0; }
+.calculator-section .calculator-intro .section-marker { margin: 0 0 18px; font-size: 11px; letter-spacing: .14em; color: var(--ink); }
+.calculator-section .calculator-intro .section-title { margin: 0; max-width: 700px; font-size: clamp(42px, 6vw, 76px); line-height: .98; letter-spacing: -.055em; overflow-wrap: normal; }
+.calculator-section .calculator-intro .section-title em { color: var(--orange); }
+.calculator-section .calculator-intro .section-intro { margin: 0 0 4px; max-width: 430px; color: var(--ink); font-size: 15px; line-height: 1.8; }
+.calculator-section .calculator-panel { grid-area: auto; width: 100%; min-width: 0; margin: 0; padding: clamp(20px, 3vw, 34px); border: 1px solid rgba(41,39,34,.16); border-radius: 16px; background: var(--paper); box-shadow: 0 12px 28px rgba(41,39,34,.08); }
+.calculator-section .calculator-entry { display: grid; grid-template-columns: minmax(0, 1fr) minmax(210px, .38fr); gap: 22px; align-items: end; padding-bottom: 24px; border-bottom: 1px solid #d5cdbd; }
+.calculator-section .calculator-panel label { display: block; margin: 0 0 9px; color: var(--ink); font-size: 13px; line-height: 1.45; font-weight: 700; }
+.calculator-section .bill-row { display: flex; width: 100%; margin: 0; }
+.calculator-section .bill-prefix { flex: 0 0 50px; min-height: 50px; border: 1px solid #c9c2b3; border-right: 0; border-radius: 7px 0 0 7px; background: #fff; color: var(--orange); }
+.calculator-section .bill-input { min-height: 50px; min-width: 0; width: 100%; border: 1px solid #c9c2b3; border-radius: 0 7px 7px 0; padding: 12px 14px; background: #fff; color: var(--ink); font-size: 16px; }
+.calculator-section .calculate-button { min-height: 50px; width: 100%; border: 0; border-radius: 7px; padding: 13px 18px; background: var(--orange); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; }
+.calculator-section .calculate-button:hover { background: var(--orange); filter: brightness(.96); transform: none; }
+.calculator-section .calculator-results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; padding-top: 24px; }
+.calculator-section .calculator-results > div { min-width: 0; padding: clamp(16px, 2vw, 24px); border: 1px solid #e0d9cd; border-top: 4px solid var(--orange); border-radius: 10px; background: #fff; }
+.calculator-section .calculator-results > div:last-child { border-top-color: var(--yellow); }
+.calculator-section .calculator-results h3 { margin: 0 0 20px; padding: 0 0 14px; border-bottom: 1px solid #e5dfd3; color: var(--ink); font-size: clamp(23px, 2.5vw, 30px); line-height: 1.1; letter-spacing: -.035em; }
+.calculator-section .result-field { min-width: 0; margin-bottom: 16px; }
+.calculator-section .result-field:last-child { margin-bottom: 0; }
+.calculator-section .calc-output { display: block; width: 100%; min-width: 0; min-height: 46px; border: 1px solid #e0d9cd; border-radius: 6px; padding: 12px; background: #f6f3eb; color: var(--ink); font-size: 14px; font-weight: 700; }
+.calculator-section .calc-help, .calculator-section .calc-tip, .calculator-section .calc-disclaimer { color: #514b40; font-size: 12px; line-height: 1.7; overflow-wrap: anywhere; }
+.calculator-section .calc-help { margin: 7px 0 0; font-size: 11px; }
+.calculator-section .calc-tip { margin: 20px 0 0; }
+.calculator-section .calc-disclaimer { margin: 18px 0 0; padding-top: 16px; border-top: 1px solid #ded7cb; font-size: 11px; }
+.calculator-section .calculator-cta { position: static; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 22px 32px; width: 100%; min-width: 0; margin: 8px 0 0; padding: clamp(22px, 3vw, 34px); border: 1px solid rgba(41,39,34,.18); border-radius: 14px; background: rgba(246,243,235,.72); }
+.calculator-section .calculator-cta > div { flex: 1 1 400px; min-width: 0; }
+.calculator-section .calculator-cta .section-kicker { margin: 0 0 10px; color: var(--ink); }
+.calculator-section .calculator-cta h2 { margin: 0 0 12px; font-size: clamp(32px, 4vw, 48px); line-height: 1.04; letter-spacing: -.05em; overflow-wrap: normal; }
+.calculator-section .calculator-cta p:not(.section-kicker) { max-width: 620px; margin: 0; color: var(--ink); font-size: 14px; line-height: 1.75; }
+.calculator-section .calculator-cta .cta-button { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; max-width: 100%; padding: 15px 22px; border-radius: 999px; background: var(--orange); color: #fff; white-space: normal; text-align: center; }
+@media (max-width: 760px) {
+ .calculator-section .wrap.calculator-layout { width: min(100% - 32px, 600px); gap: 22px; }
+ .calculator-section .calculator-intro { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+ .calculator-section .calculator-intro .section-title { font-size: clamp(40px, 10vw, 62px); }
+ .calculator-section .calculator-intro .section-intro { max-width: 560px; }
+ .calculator-section .calculator-entry { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+ .calculator-section .calculator-results { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+ .calculator-section .calculator-cta { align-items: flex-start; flex-direction: column; }
+ .calculator-section .calculator-cta .cta-button { align-self: flex-start; }
+}
+@media (max-width: 420px) {
+ .calculator-section .wrap.calculator-layout { width: calc(100% - 28px); }
+ .calculator-section .calculator-panel { padding: 16px; }
+ .calculator-section .calculator-results > div { padding: 15px; }
+ .calculator-section .calculator-intro .section-title { font-size: 39px; }
+}
+
+</style></head><body><header class="site-header"><div class="wrap header-inner"><a class="brand" href="index.html" aria-label="Sunea Solar &amp; Lighting Retail OPC, home"><span class="brand-lockup" aria-hidden="true"><img src="logo.png" alt="" /></span></a><nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="product.html">Our Product</a><a href="why.html">Why Sunea</a></nav><a class="outline-link" href="mailto:suneasalesph@gmail.com?subject=For%20Solar%20quotation&body=Please%20fill%20out%20the%20following%3A%0A%0AName%3A%20%0AMonthly%20Electric%20Bill%3A%20%0AAddress%3A%20">Get Free Solar Quote ↘</a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div><nav class="mobile-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="product.html">Our Product</a><a href="why.html">Why Sunea</a></nav></header><main id="top">
+<section class="page-hero"><div class="wrap"><p class="eyebrow mono">SUNEA SOLAR & LIGHTING RETAIL OPC</p><h1 class="display">Solar packages.<br><span style="color:var(--orange)">Made for your needs.</span></h1><p class="hero-copy">Explore our hybrid solar packages, designed to help homes take a practical step toward energy independence. Request a quotation to confirm the right configuration for your property.</p></div></section>
+<section class="section" id="packages"><div class="wrap"><div class="section-head"><div><p class="section-kicker mono" style="color:var(--orange)">01 / Solar Packages</p><h2 class="section-title display">Choose your<br><em>solar setup.</em></h2></div><p class="section-intro">Three hybrid package options with solar panels, inverter, battery storage, and essential mounting accessories.</p></div><div class="packages">
+<article class="package-card"><span class="package-kicker">Hybrid package / 01</span><h2 class="display">6KW Hybrid Package</h2><p class="package-description">A compact hybrid setup for homes with practical energy needs.</p><p class="package-price">₱225,000</p><ul><li>10 × 630W Sonnex Bifacial Panels</li><li>1 × 6KW Sonnex Hybrid Inverter</li><li>1 × 5KW Sonnex 5KW/100Ah 51.2V LiFePO4 Battery</li><li>Accessories set: railings, L-foot, mid clamp, and end clamp</li></ul><a class="package-action" href="mailto:suneasalesph@gmail.com?subject=For%20Solar%20quotation&body=Please%20fill%20out%20the%20following%3A%0A%0AName%3A%20%0AMonthly%20Electric%20Bill%3A%20%0AAddress%3A%20">Get this package ↗</a></article>
+<article class="package-card featured"><span class="package-kicker">Hybrid package / 02 · Popular choice</span><h2 class="display">8KW Hybrid Package</h2><p class="package-description">More capacity for households looking to support a larger load.</p><p class="package-price">₱340,000</p><ul><li>13 × 630W Sonnex Bifacial Panels</li><li>1 × 8KW Livoltek Hybrid Inverter</li><li>1 × 16KW Livoltek 16KW/314Ah 51.2V LiFePO4 Battery</li><li>Accessories set: railings, L-foot, mid clamp, and end clamp</li></ul><a class="package-action" href="mailto:suneasalesph@gmail.com?subject=For%20Solar%20quotation&body=Please%20fill%20out%20the%20following%3A%0A%0AName%3A%20%0AMonthly%20Electric%20Bill%3A%20%0AAddress%3A%20">Get this package ↗</a></article>
+<article class="package-card"><span class="package-kicker">Hybrid package / 03</span><h2 class="display">12KW Hybrid Package</h2><p class="package-description">A higher-capacity hybrid option for bigger energy requirements.</p><p class="package-price">₱445,000</p><ul><li>20 × 630W Sonnex Bifacial Panels</li><li>1 × 12KW Livoltek Hybrid Inverter</li><li>1 × 16KW Livoltek 16KW/314Ah 51.2V LiFePO4 Battery</li><li>Accessories set: railings, L-foot, mid clamp, and end clamp</li></ul><a class="package-action" href="mailto:suneasalesph@gmail.com?subject=For%20Solar%20quotation&body=Please%20fill%20out%20the%20following%3A%0A%0AName%3A%20%0AMonthly%20Electric%20Bill%3A%20%0AAddress%3A%20">Get this package ↗</a></article></div><p class="package-note">Note: Sonnex is a German brand. Package prices and final system design should be confirmed with SUNEA following a site assessment.</p></div></section>
+<section class="section calculator-section" id="calculator"><div class="wrap calculator-layout"><div class="calculator-intro"><div><p class="section-marker mono">02 / Solar Calculator</p><h2 class="section-title display">Your bill.<br>Your <em>solar estimate.</em></h2></div><p class="section-intro">Enter your average monthly electricity bill to compare two illustrative SUNEA system estimates. Clear results, same calculator logic.</p></div><div class="calculator-panel"><div class="calculator-entry"><div><label for="input-field">Your average monthly electricity bill</label><div class="bill-row"><span class="bill-prefix">₱</span><input class="bill-input" type="number" id="input-field" min="1" step="1" inputmode="decimal" aria-label="Average monthly electricity bill in pesos" placeholder="e.g. 5000"></div></div><button id="btn-calculate" class="calculate-button" type="button">Calculate my estimate ↗</button></div><div class="calculator-results"><div><h3>#BawasBill</h3><div class="result-field"><label for="bawas-bill-system-size-output">System size</label><input class="calc-output" id="bawas-bill-system-size-output" disabled></div><div class="result-field"><label for="bawas-bill-number-of-panels-output">Number of panels</label><input class="calc-output" id="bawas-bill-number-of-panels-output" disabled></div><div class="result-field"><label for="bawas-bill-estimated-monthly-savings-output">Estimated monthly savings*</label><input class="calc-output" id="bawas-bill-estimated-monthly-savings-output" disabled><p class="calc-help">*Savings vary with system utilization and actual usage.</p></div></div><div><h3>#ZeroBill</h3><div class="result-field"><label for="zero-bill-system-size-output">System size</label><input class="calc-output" id="zero-bill-system-size-output" disabled></div><div class="result-field"><label for="zero-bill-number-of-panels-output">Number of panels</label><input class="calc-output" id="zero-bill-number-of-panels-output" disabled></div><div class="result-field"><label for="zero-bill-estimated-monthly-savings-output">Estimated monthly savings**</label><input class="calc-output" id="zero-bill-estimated-monthly-savings-output" disabled><p class="calc-help">**Potential savings with higher utilization: ₱<span id="zero-bill-max-output">—</span> or more.</p></div></div></div><p class="calc-tip">For better system utilization, run energy-intensive appliances during peak solar hours, around 10 AM–2 PM.</p><p class="calc-disclaimer">For #BawasBill, estimates use a conservative 3.9 peak sun hours and 50%–100% system utilization. For #ZeroBill, estimates assume successful Net Metering, 3.9 peak sun hours, and 40%–60% utilization. These are illustrative estimates, not a guarantee of savings or a formal system design.</p></div><aside class="calculator-cta"><div><p class="section-kicker mono">03 / Make it yours</p><h2 class="display">Want a tailored<br>solar <em style="color:var(--orange)">quote?</em></h2><p>Share your latest monthly bill with our team to discuss a setup suited to your property.</p></div><a class="cta-button" href="mailto:suneasalesph@gmail.com?subject=For%20Solar%20quotation&amp;body=Please%20fill%20out%20the%20following%3A%0A%0AName%3A%20%0AMonthly%20Electric%20Bill%3A%20%0AAddress%3A%20">Request a quote ↗</a></aside></div></section>
+</main><footer id="contact" class="footer"><div class="wrap"><div class="footer-main"><a href="index.html" class="brand footer-brand" aria-label="Sunea Solar &amp; Lighting Retail OPC, back to top"><span class="brand-lockup" aria-hidden="true"><img src="logo.png" alt="" /></span></a><div class="footer-contact"><section aria-labelledby="head-office-heading"><h2 id="head-office-heading" class="contact-label office-heading">Head office</h2><p class="office-company">Sunea Solar &amp; Lighting Retail OPC</p><div class="contact-item"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a class="contact-value" href="mailto:suneasalesph@gmail.com">suneasalesph@gmail.com</a></div><div class="contact-item"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><address class="contact-value">2nd Floor Ysabelle Building, Belfast Avenue,<br>Quezon City, Philippines 1118</address></div></section><section aria-labelledby="branch-heading"><h2 id="branch-heading" class="contact-label office-heading">Branch</h2><div class="contact-item"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><address class="contact-value">B6 L1-B Mc-Arthur Highway, Juliana City,<br>San Fernando, Pampanga 2000, Philippines</address></div><div class="contact-item"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.2 18.8a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.09 4.2 2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72l.45 2.75a2 2 0 0 1-.57 1.68L7.7 9.4a16 16 0 0 0 6 6l1.25-1.25a2 2 0 0 1 1.68-.57l2.75.45a2 2 0 0 1 1.72 1.89Z"/></svg><a class="contact-value" href="tel:0301952813">030 195 2813</a></div><div class="contact-item"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.2 18.8a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.09 4.2 2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72l.45 2.75a2 2 0 0 1-.57 1.68L7.7 9.4a16 16 0 0 0 6 6l1.25-1.25a2 2 0 0 1 1.68-.57l2.75.45a2 2 0 0 1 1.72 1.89Z"/></svg><a class="contact-value" href="tel:0458600901">0458600901</a></div></section></div></div><div class="footer-bottom"><span>© 2026 Sunea Solar & Lighting Retail OPC. All rights reserved.</span><a href="index.html">Return to home ↗</a></div></div></footer><script>
+const menuButton=document.querySelector('.menu-toggle');const mobileNav=document.querySelector('.mobile-nav');
+if(menuButton&&mobileNav){menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Close navigation':'Open navigation');mobileNav.classList.toggle('open',open)});mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Open navigation');mobileNav.classList.remove('open')}));}
+const calcButton=document.getElementById('btn-calculate');
+if(calcButton){
+  calcButton.addEventListener('click',()=>{
+    const bill=Number(document.getElementById('input-field').value);
+    if(!Number.isFinite(bill)||bill<=0){document.getElementById('input-field').focus();alert('Please enter a valid average monthly electricity bill.');return;}
+    // Same calculation formula as the supplied GoSolar source code.
+    function calculatePanels(averageBill,minBill=5500,minPanels=5,step=1000){
+      if(averageBill<=minBill)return minPanels;
+      return minPanels+Math.ceil((averageBill-minBill)/step);
+    }
+    function calculateSystemSize(panels,panelSize=0.51){return panels*panelSize;}
+    function calculateSavings(systemSize,minRate=1,maxRate=1.6667){
+      const min=Math.round(systemSize*3*12*30*minRate).toLocaleString('en-PH');
+      const max=Math.round(systemSize*3*12*30*maxRate).toLocaleString('en-PH');
+      return '₱ '+min+' - ₱ '+max;
+    }
+    const bawasPanels=calculatePanels(bill);
+    const bawasKw=calculateSystemSize(bawasPanels);
+    const bawas={panels:bawasPanels,systemSize:bawasKw,savings:calculateSavings(bawasKw)};
+    const zeroPanels=bawas.panels*2;
+    const zeroKw=bawas.systemSize*2;
+    const zero={panels:zeroPanels,systemSize:zeroKw,savings:calculateSavings(zeroKw),max:(zeroPanels*3.9*12*30).toLocaleString('en-PH')};
+    document.getElementById('bawas-bill-system-size-output').value=bawas.systemSize.toFixed(2)+' kWp';
+    document.getElementById('bawas-bill-number-of-panels-output').value=bawas.panels;
+    document.getElementById('bawas-bill-estimated-monthly-savings-output').value=bawas.savings;
+    document.getElementById('zero-bill-system-size-output').value=zero.systemSize.toFixed(2)+' kWp';
+    document.getElementById('zero-bill-number-of-panels-output').value=zero.panels;
+    document.getElementById('zero-bill-estimated-monthly-savings-output').value=zero.savings;
+    document.getElementById('zero-bill-max-output').textContent=zero.max;
+  });
+}</script><script>
+
+// Allow a package to stay highlighted after it is clicked/tapped.
+document.querySelectorAll('.package-card').forEach(card => {
+  card.setAttribute('tabindex', '0');
+  card.setAttribute('role', 'button');
+  card.setAttribute('aria-pressed', 'false');
+  const selectCard = () => {
+    document.querySelectorAll('.package-card').forEach(other => {
+      const selected = other === card && !card.classList.contains('is-selected');
+      other.classList.toggle('is-selected', selected);
+      other.setAttribute('aria-pressed', String(selected));
+    });
+  };
+  card.addEventListener('click', event => {
+    if (event.target.closest('a')) return;
+    selectCard();
+  });
+  card.addEventListener('keydown', event => {
+    if (event.target !== card) return;
+    if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectCard(); }
+  });
+});
+
+</script>
+</body></html>
