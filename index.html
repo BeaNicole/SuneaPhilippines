@@ -146,6 +146,14 @@
 #testimonials .testimonial-note{color:#777064;font-size:9px;line-height:1.7;margin:16px 0 0}
 @media(max-width:700px){#testimonials .testimonial-card{flex-basis:84vw;min-height:280px}}
 @media(prefers-reduced-motion:reduce){#work .project-scroll-hint span,#testimonials .testimonial-scroll-hint span{animation:none}}
+/* Round the corners of the About pictures, project cards, feedback cards, and video */
+#work .project-card,
+#testimonials .testimonial-card,
+#approach .about-gallery .about-card,
+video {
+  border-radius: 12px;
+  overflow: hidden;
+}
 </style>
 <style>
 /* Asset guide: place about1.png–about4.png beside index.html at 1200 × 1600 px each (3:4 portrait). Keep process.mp4 beside index.html as well. */
