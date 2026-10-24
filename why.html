@@ -150,7 +150,7 @@ video {
 </style>
 <style>
 /* Asset guide: place about1.png–about4.png beside index.html at 1200 × 1600 px each (3:4 portrait). Keep process.mp4 beside index.html as well. */
-:root{--orange:var(--orange);--yellow:var(--orange)}
+:root{--orange:#e85d20;--yellow:#efb936;--paper:#f6f3eb;--ink:#292722;--muted:#777064}
 html body p{text-align:justify!important;text-justify:inter-word;hyphens:auto}
 html body #approach .photo-note{text-align:justify!important}
 .sun-section{background:var(--yellow)}
@@ -229,7 +229,7 @@ html body #approach .photo-note{text-align:justify!important}
 }
 </style>
 <style>
-.page-hero{padding:155px 0 76px;background:radial-gradient(ellipse at 50% 30%,rgba(249,93,44,.13),transparent 55%),var(--paper)}
+.page-hero{padding:155px 0 76px;background:radial-gradient(ellipse at 50% 30%,rgba(232,93,32,.13),transparent 55%),var(--paper)}
 .page-hero .eyebrow{color:var(--orange)}.page-hero h1{font-size:clamp(58px,9vw,112px);line-height:.9;margin:0;max-width:1000px}.page-hero .hero-copy{color:#625d53;max-width:650px}
 .packages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
 .package-card{display:flex;flex-direction:column;padding:28px 24px;border:1px solid #d7d0c3;background:#fbf9f3;min-width:0;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease,background .3s ease}
@@ -251,44 +251,74 @@ html body #approach .photo-note{text-align:justify!important}
   .step:last-child { border-bottom: 0; }
 }
 
-/* Final contrast correction: use SUNEA palette with readable text contrast. */
+/* Match the orange CTA section in index.html. */
 .page-cta {
-  background: var(--orange) !important;
-  color: var(--ink) !important;
-  padding: clamp(56px, 7vw, 84px) 0;
+  position: relative;
   overflow: hidden;
+  background: var(--orange) !important;
+  color: #fff5e4 !important;
+  padding: 110px 0;
 }
-.page-cta .wrap { width: min(1260px, calc(100% - 48px)); margin-inline: auto; }
-.page-cta .section-kicker { color: var(--ink) !important; opacity: .9; }
-.page-cta h2 {
-  color: var(--ink) !important;
-  font-size: clamp(42px, 6.5vw, 78px);
-  line-height: .98;
-  letter-spacing: -.055em;
-  max-width: 900px;
+.page-cta .wrap {
+  width: min(1260px, calc(100% - 48px));
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1.6fr .65fr;
+  column-gap: 8%;
+  align-items: end;
+}
+.page-cta .section-kicker {
+  grid-column: 1;
+  grid-row: 1;
+  color: #ffdc8e !important;
   margin: 0 0 22px;
 }
+.page-cta h2 {
+  grid-column: 1;
+  grid-row: 2 / span 2;
+  color: #fff5e4 !important;
+  font-size: clamp(60px, 8vw, 112px);
+  line-height: .84;
+  letter-spacing: -.065em;
+  margin: 0;
+}
 .page-cta p {
-  color: var(--ink) !important;
-  opacity: .9;
-  max-width: 720px;
+  grid-column: 2;
+  grid-row: 2;
+  max-width: 480px;
+  color: #ffead3 !important;
+  font-size: 13px;
   line-height: 1.8;
-  font-size: 16px;
+  margin: 0 0 23px;
 }
 .page-cta .cta-button {
+  grid-column: 2;
+  grid-row: 3;
+  justify-self: start;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 12px;
+  border: 0;
+  border-radius: 30px;
   background: var(--yellow) !important;
   color: var(--ink) !important;
-  border: 1px solid rgba(41,39,34,.2);
-  border-radius: 999px;
-  padding: 15px 22px;
+  padding: 15px 20px;
+  font-size: 10px;
   font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
 }
-.page-cta .cta-button:hover { background: var(--yellow) !important; filter: brightness(.97); }
+.page-cta .cta-button:hover { background: #fff0be !important; }
+@media (max-width: 850px) {
+  .page-cta { padding: 78px 0; }
+  .page-cta .wrap { grid-template-columns: 1fr; gap: 28px; }
+  .page-cta .section-kicker, .page-cta h2, .page-cta p, .page-cta .cta-button { grid-column: 1; grid-row: auto; }
+  .page-cta h2 { font-size: clamp(56px, 10vw, 82px); }
+  .page-cta p { margin: 0; }
+}
 @media (max-width: 560px) {
   .page-cta { padding: 52px 0; }
+  .page-cta .wrap { width: calc(100% - 36px); }
   .page-cta h2 { font-size: clamp(40px, 11vw, 58px); }
   .page-cta p { font-size: 14px; }
 }
